@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6750C7">
+<title>CashTory 사용법</title>
+<style>
+:root{--a:#6750C7;--soft:#ECE9F7;--bg:#F6F7FB;--card:#fff;--text:#1C1D22;--sub:#747783;--line:#E4E5EC;--max:980px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI","Noto Sans KR",sans-serif;line-height:1.7}a{text-decoration:none;color:inherit}.wrap{width:min(calc(100% - 32px),var(--max));margin:auto}.top{position:sticky;top:0;background:rgba(246,247,251,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);z-index:10}.nav{height:64px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900}.back{font-size:14px;color:var(--a);font-weight:800}.hero{padding:64px 0 36px}.eyebrow{color:var(--a);font-size:12px;font-weight:900;letter-spacing:.08em}.hero h1{font-size:clamp(38px,6vw,60px);line-height:1.06;letter-spacing:-.05em;margin:10px 0 14px}.hero p{max-width:680px;color:var(--sub);font-size:18px}.toc{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0 56px}.toc a{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;font-weight:800}.toc small{display:block;color:var(--sub);font-weight:500;margin-top:5px}.section{padding:54px 0;border-top:1px solid var(--line)}.section h2{font-size:30px;letter-spacing:-.035em;margin:0 0 18px}.steps{display:grid;gap:12px}.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.step b{display:block;margin-bottom:6px}.step p{margin:0;color:var(--sub);font-size:14px}.tip{margin-top:14px;background:var(--soft);color:#4f409e;border-radius:16px;padding:15px 17px;font-size:14px}.cta{margin:52px 0 74px;background:#1C1640;color:#fff;border-radius:26px;padding:30px}.cta p{color:#cfcbdf}.btn{display:inline-block;background:var(--a);color:#fff;border-radius:999px;padding:12px 18px;font-weight:800;margin-top:8px}@media(max-width:720px){.toc{grid-template-columns:1fr}.hero{padding-top:46px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav"><a class="brand" href="/cashtory/">CashTory</a><a class="back" href="/cashtory/">← 소개로 돌아가기</a></div></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">GUIDE</div><h1>CashTory 사용법</h1><p>처음 시작하는 방법부터 영수증, 카드·할부, 월말 리뷰, 백업까지 실제 앱 흐름에 맞춰 정리했습니다.</p></section>
+
+<nav class="toc">
+<a href="#start">처음 시작하기<small>자산 · 분류 · 첫 거래</small></a>
+<a href="#input">거래 기록<small>직접 입력 · 영수증 · 즐겨찾기</small></a>
+<a href="#recurring">반복되는 거래<small>정기거래 · 일시정지</small></a>
+<a href="#card">카드와 할부<small>결제 · 할부 · 선결제</small></a>
+<a href="#assets">자산과 분석<small>자산 · 통계 · 월말 리뷰</small></a>
+<a href="#data">데이터와 설정<small>백업 · 가져오기 · 위젯</small></a>
+</nav>
+
+<section class="section" id="start"><h2>1. 처음 시작하기</h2><div class="steps">
+<div class="step"><b>① 자산을 먼저 등록하세요</b><p>현금, 입출금 계좌, 신용카드 등 실제 사용하는 자산을 추가하고 시작 금액을 맞춥니다.</p></div>
+<div class="step"><b>② 분류를 생활 방식에 맞게 정리하세요</b><p>예: 식비 › 외식, 식비 › 장보기처럼 분류와 소분류를 나누면 통계를 더 세밀하게 볼 수 있습니다.</p></div>
+<div class="step"><b>③ 첫 거래를 기록해 보세요</b><p>하단 가운데 입력 버튼에서 지출·수입·이체를 선택해 금액, 자산, 분류를 기록합니다.</p></div>
+</div><div class="tip">월급날 기준으로 가계부를 보고 싶다면 <b>더보기 › 월별 집계 시작일</b>에서 원하는 날짜를 설정하세요.</div></section>
+
+<section class="section" id="input"><h2>2. 거래 기록하기</h2><div class="steps">
+<div class="step"><b>직접 입력</b><p>금액과 분류, 자산을 직접 선택합니다. 일반적인 지출·수입·이체는 이 방법이 가장 빠릅니다.</p></div>
+<div class="step"><b>영수증 입력</b><p>영수증을 촬영하면 날짜·가게·금액·품목 인식을 도와줍니다. 저장 전 결과를 확인하고 수정할 수 있습니다.</p></div>
+<div class="step"><b>총액 1건 vs 품목별 나누기</b><p>영수증 전체를 거래 하나로 저장하거나, 품목별로 나눠 서로 다른 분류로 기록할 수 있습니다.</p></div>
+<div class="step"><b>즐겨찾기</b><p>자주 쓰는 거래를 저장해 두면 오늘 날짜로 불러와 금액이나 메모만 확인한 뒤 저장할 수 있습니다.</p></div>
+</div></section>
+
+<section class="section" id="recurring"><h2>3. 반복되는 거래</h2><div class="steps">
+<div class="step"><b>정기거래</b><p>월세·구독료·용돈처럼 매일·매주·매달 반복되는 거래를 등록하면 앱을 열 때 지나간 발생분을 자동으로 만듭니다.</p></div>
+<div class="step"><b>잠시 멈추기</b><p>삭제 대신 일시정지를 사용하면 설정은 유지되고 자동 생성만 멈춥니다. 다시 켤 때 정지 기간 거래를 만들지 선택할 수 있습니다.</p></div>
+</div></section>
+
+<section class="section" id="card"><h2>4. 카드와 할부</h2><div class="steps">
+<div class="step"><b>신용카드 사용은 구매일에 지출로 기록됩니다</b><p>카드값이 계좌에서 빠지는 날에는 같은 소비를 다시 지출로 잡지 않습니다. 카드 대금 결제는 카드 부채를 갚는 이동으로 처리됩니다.</p></div>
+<div class="step"><b>자동결제</b><p>카드에 결제계좌와 결제일을 설정하면 결제일이 지난 뒤 결제계좌에서 카드로 이체 기록을 만들 수 있습니다.</p></div>
+<div class="step"><b>할부</b><p>할부를 등록하면 회차별 예정 거래가 만들어져 앞으로 낼 금액과 카드 청구 흐름을 볼 수 있습니다.</p></div>
+<div class="step"><b>선결제</b><p>앞으로 올 회차를 실제로 미리 갚았다면 선결제를 사용하세요. 돈이 나간 기록과 남은 회차가 함께 정리됩니다.</p></div>
+</div></section>
+
+<section class="section" id="assets"><h2>5. 자산 · 통계 · 월말 리뷰</h2><div class="steps">
+<div class="step"><b>자산과 순자산</b><p>자산과 부채를 함께 관리하고, 필요한 자산만 전체 합계와 순자산 계산에 포함할 수 있습니다.</p></div>
+<div class="step"><b>통계</b><p>월별 비교, 최근 추이, 지출·수입 상위 항목, 자산 구성, 순자산 흐름 등을 확인할 수 있습니다.</p></div>
+<div class="step"><b>월말 마감 리뷰</b><p>수입·지출·저축률, 지난달과의 변화, 고정비·변동비, 카드·할부, 자산 변화와 다음 달 예정까지 한 화면에서 돌아봅니다.</p></div>
+</div></section>
+
+<section class="section" id="data"><h2>6. 데이터와 설정</h2><div class="steps">
+<div class="step"><b>백업과 복원</b><p>기기 내 백업과 백업 파일 내보내기를 구분해 사용할 수 있습니다. 기기 교체에 대비하려면 백업 파일을 앱 밖에도 보관하세요.</p></div>
+<div class="step"><b>Excel / CSV</b><p>거래 내역을 파일로 내보내 직접 확인하거나 분석할 수 있습니다.</p></div>
+<div class="step"><b>다른 앱에서 가져오기</b><p>다른 가계부에서 내보낸 Excel(.xlsx) 또는 CSV 파일을 열 매핑과 미리보기 후 가져올 수 있습니다. 가져오기 전 안전 백업이 만들어집니다.</p></div>
+<div class="step"><b>위젯</b><p>홈 화면에서 월 요약을 보거나 지출·수입·영수증 입력으로 바로 이동할 수 있습니다.</p></div>
+<div class="step"><b>테마와 언어</b><p>라이트·다크 모드, 24가지 테마 색상, 6개 언어를 지원합니다.</p></div>
+</div></section>
+
+<div class="cta"><h2>더 자세한 답이 필요하신가요?</h2><p>자주 묻는 질문에서 카드·할부·영수증·데이터 관련 내용을 더 자세히 확인할 수 있습니다.</p><a class="btn" href="/cashtory/faq/">FAQ 보기</a></div>
+</main>
+</body></html>
