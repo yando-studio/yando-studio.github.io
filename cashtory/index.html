@@ -105,7 +105,7 @@
     .dataGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
     .dataCard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;display:flex;gap:15px}
     .dataCard i{font-style:normal;width:42px;height:42px;border-radius:13px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:900}.dataCard h3{margin:0 0 5px;font-size:18px}.dataCard p{margin:0;color:var(--sub);font-size:14px}
-    .widgetStage{background:#EAEAF1;border-radius:30px;padding:32px;display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
+    .realWidgetCapture{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:30px;padding:14px;box-shadow:var(--shadow);overflow:hidden}.realWidgetCapture img{display:block;width:100%;height:auto;border-radius:22px}
     .widget{background:rgba(255,255,255,.92);border:1px solid #D9DAE1;border-radius:26px;padding:19px;box-shadow:0 18px 44px rgba(40,40,60,.13)}
     .widget.large{min-height:210px}.widgetTitle{display:flex;justify-content:space-between;font-size:13px;font-weight:850}.widgetTitle em{font-style:normal;color:var(--accent)}
     .widgetAmount{font-size:25px;font-weight:900;margin-top:18px}.wBar{height:7px;background:#EAEAF0;border-radius:99px;margin-top:14px;overflow:hidden}.wBar span{display:block;width:64%;height:100%;background:var(--accent);border-radius:99px}
@@ -269,21 +269,11 @@
       <div class="wrap">
         <div class="sectionHead">
           <p class="kicker">WIDGETS</p>
-          <h2>앱을 열기 전에도 빠르게.</h2>
-          <p class="sectionLead">홈 화면에서 이번 달 흐름을 확인하고 지출·수입·영수증 입력으로 바로 들어갈 수 있는 6가지 위젯을 제공합니다.</p>
+          <h2>앱을 열지 않아도,<br>필요한 기능은 바로.</h2>
+          <p class="sectionLead">이번 달 지출과 수입을 홈 화면에서 바로 확인하고, 지출·수입·영수증 촬영으로 곧바로 들어갈 수 있습니다.</p>
         </div>
-        <div class="widgetStage">
-          <div class="widget large">
-            <div class="widgetTitle"><span>9월 CashTory</span><em>이번 달</em></div>
-            <div class="widgetAmount">2,562,000원 지출</div>
-            <div class="wBar"><span></span></div>
-            <div class="wBtns"><div class="wBtn">- 지출 입력</div><div class="wBtn alt">+ 수입 입력</div></div>
-          </div>
-          <div class="widgetStack">
-            <div class="smallWidget">＋ 지출 빠른 입력</div>
-            <div class="smallWidget">＋ 수입 빠른 입력</div>
-            <div class="smallWidget">▣ 영수증 바로가기</div>
-          </div>
+        <div class="realWidgetCapture">
+          <img src="/cashtory/assets/widgets.webp" alt="CashTory 실제 위젯이 안드로이드 홈 화면에 배치된 모습" loading="lazy">
         </div>
       </div>
     </section>
