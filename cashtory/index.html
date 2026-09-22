@@ -37,7 +37,7 @@
     .micro{margin-top:17px;font-size:13px;color:#8A8C97}
     .phoneStage{position:relative;min-height:600px;display:grid;place-items:center}
     .halo{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#DDD7FF 0,#EFEAFF 48%,rgba(239,234,255,0) 72%)}
-    .phone{position:relative;width:316px;border-radius:42px;background:#17181F;padding:10px;box-shadow:0 36px 90px rgba(31,25,62,.23);transform:rotate(2deg)}
+    .phone{position:relative;width:316px;border-radius:42px;background:#17181F;padding:10px;box-shadow:0 36px 90px rgba(31,25,62,.23);transform:rotate(2deg);overflow:hidden}.phoneShot{display:block;width:100%;height:auto;border-radius:34px}
     .screen{min-height:570px;border-radius:34px;background:#F4F5F9;overflow:hidden;padding:22px 16px 18px}
     .status{height:14px;width:88px;border-radius:99px;background:#17181F;margin:0 auto 16px}
     .screenTop{display:flex;align-items:center;justify-content:space-between}
@@ -138,24 +138,7 @@
 
         <div class="phoneStage" aria-label="CashTory 화면 예시">
           <div class="halo"></div>
-          <div class="phone">
-            <div class="screen">
-              <div class="status"></div>
-              <div class="screenTop"><div class="screenTitle">9월 가계부</div><div class="avatar">₩</div></div>
-              <div class="summary">
-                <small>이번 달 남은 돈</small><div class="money">3,468,000원</div>
-                <div class="balanceRow">
-                  <div class="mini in"><small>수입</small><b>6,030,000</b></div>
-                  <div class="mini out"><small>지출</small><b>2,562,000</b></div>
-                </div>
-              </div>
-              <div class="dateHead">9월 22일 · 오늘</div>
-              <div class="tx"><div class="txL"><div class="ico">☕</div><div><strong>카페</strong><span>식비 · 카드</span></div></div><span class="amt">- 5,500</span></div>
-              <div class="tx"><div class="txL"><div class="ico">🛒</div><div><strong>마트</strong><span>생활 · 카드</span></div></div><span class="amt">- 42,800</span></div>
-              <div class="fab">+</div>
-            </div>
-          </div>
-          <div class="floatCard one">영수증으로 <em>빠르게 입력</em></div>
+          <div class="phone"><img class="phoneShot" src="/cashtory/assets/app-ledger.png" alt="CashTory 실제 가계부 화면"></div><div class="floatCard one">영수증으로 <em>빠르게 입력</em></div>
           <div class="floatCard two">이번 달 <em>저축률 57%</em></div>
         </div>
       </div>
