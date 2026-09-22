@@ -23,6 +23,21 @@
     .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.03em}
     .mark{width:34px;height:34px;border-radius:10px;background:#1C1147;color:white;display:grid;place-items:center;font-weight:900;font-size:14px;letter-spacing:-.08em}
+    .brandIcon{width:36px;height:36px;border-radius:11px;display:block;box-shadow:0 4px 12px rgba(28,17,71,.16)}
+    .realMedia{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:var(--shadow)}
+    .realMediaGrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:26px;align-items:center}
+    .shotFrame{background:#15151a;border-radius:30px;padding:8px;box-shadow:0 24px 58px rgba(35,30,60,.18);max-width:360px;margin:0 auto}
+    .shotFrame img{display:block;width:100%;height:auto;border-radius:23px}
+    .mediaCopy h3{font-size:26px;letter-spacing:-.035em;margin:0 0 10px}
+    .mediaCopy p{margin:0;color:var(--sub)}
+    .mediaCopy .miniNote{margin-top:15px;padding:13px 15px;border-radius:14px;background:var(--accent-soft);color:#5547a1;font-size:13px;font-weight:700}
+    .reviewCapture{background:#fff;border-radius:26px;padding:8px;box-shadow:0 30px 80px rgba(0,0,0,.28);max-width:360px;margin:0 auto;overflow:hidden}
+    .reviewCapture img{display:block;width:100%;height:auto;border-radius:20px}
+    .screenShowcase{padding:96px 0;background:#fff}
+    .showcaseGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:42px;align-items:center}
+    .collage{display:block;width:min(100%,430px);margin:0 auto;border-radius:28px;box-shadow:0 26px 70px rgba(31,25,62,.15);border:1px solid var(--line)}
+    .screenTags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+    .screenTags span{padding:8px 11px;background:var(--accent-soft);color:var(--accent);border-radius:999px;font-size:12px;font-weight:800}
     .navlinks{display:flex;align-items:center;gap:22px;font-size:14px;color:#565965;font-weight:650}
     .navlinks a:hover{color:var(--accent)}
     .pill{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--accent);color:#fff;font-weight:800;box-shadow:0 8px 18px rgba(103,80,199,.22)}
@@ -104,7 +119,7 @@
     .centerCta{text-align:center;padding:110px 0 100px;background:#fff}.centerCta h2{max-width:720px;margin:0 auto}.centerCta p{color:var(--sub);margin:16px 0 28px}
     footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-size:13px}.footerRow{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}.footerLinks{display:flex;gap:16px;flex-wrap:wrap}
     @media(max-width:900px){
-      .navlinks a:not(.download){display:none}.heroGrid,.cardsLayout,.reviewGrid,.widgetStage{grid-template-columns:1fr}.phoneStage{min-height:540px}.trustGrid{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}.personal{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.reviewGrid{gap:30px}
+      .navlinks a:not(.download){display:none}.heroGrid,.cardsLayout,.reviewGrid,.widgetStage,.realMediaGrid,.showcaseGrid{grid-template-columns:1fr}.phoneStage{min-height:540px}.trustGrid{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}.personal{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.reviewGrid{gap:30px}
     }
     @media(max-width:560px){
       .wrap{width:min(calc(100% - 28px),var(--max))}.hero{padding-top:52px}.heroGrid{gap:32px}h1{font-size:44px}.lead{font-size:17px}.phone{width:286px}.screen{min-height:530px}.floatCard{display:none}.phoneStage{min-height:540px}.trustGrid,.dataGrid,.personal,.steps{grid-template-columns:1fr}.bulletGrid{grid-template-columns:1fr}.reviewNums{grid-template-columns:1fr}.nav{min-height:62px}.pill{min-height:42px;padding:0 15px}.widgetStage{padding:18px}
@@ -114,7 +129,7 @@
 <body>
   <header class="top">
     <div class="wrap nav">
-      <a class="brand" href="/"><span class="mark">CT</span><span>CashTory</span></a>
+      <a class="brand" href="/"><img class="brandIcon" src="/cashtory/assets/app-icon.webp" alt="CashTory 아이콘"><span>CashTory</span></a>
       <nav class="navlinks" aria-label="주요 메뉴">
         <a href="#features">기능</a><a href="#review">월말 리뷰</a><a href="/cashtory/guide/">사용법</a><a href="/cashtory/faq/">FAQ</a>
         <a class="pill download" href="https://play.google.com/store/apps/details?id=com.yandostudio.cashtory">Google Play</a>
@@ -138,7 +153,7 @@
 
         <div class="phoneStage" aria-label="CashTory 화면 예시">
           <div class="halo"></div>
-          <div class="phone"><img class="phoneShot" src="/cashtory/assets/app-ledger.png" alt="CashTory 실제 가계부 화면"></div><div class="floatCard one">영수증으로 <em>빠르게 입력</em></div>
+          <div class="phone"><img class="phoneShot" src="/cashtory/assets/ledger.webp" alt="CashTory 실제 가계부 화면"></div><div class="floatCard one">영수증으로 <em>빠르게 입력</em></div>
           <div class="floatCard two">이번 달 <em>저축률 57%</em></div>
         </div>
       </div>
@@ -164,6 +179,17 @@
           <article class="feature"><div class="featureIcon">＋</div><h3>직접 입력</h3><p>금액과 분류, 자산을 골라 바로 기록합니다. 지출·수입·이체를 한 흐름에서 입력할 수 있어요.</p></article>
           <article class="feature"><div class="featureIcon">▣</div><h3>영수증 입력</h3><p>날짜·가게·금액·품목 인식을 도와줍니다. 총액 1건으로 저장하거나 품목별로 나눠 기록할 수도 있어요.</p></article>
           <article class="feature"><div class="featureIcon">★</div><h3>즐겨찾기</h3><p>커피·점심·교통비처럼 자주 쓰는 내용을 저장해 두고, 오늘 날짜로 불러와 빠르게 기록하세요.</p></article>
+        </div>
+        <div class="realMedia">
+          <div class="realMediaGrid">
+            <div class="shotFrame"><img src="/cashtory/assets/receipt-items.webp" alt="CashTory 영수증 품목별 저장 실제 화면" loading="lazy"></div>
+            <div class="mediaCopy">
+              <p class="kicker">RECEIPT TO TRANSACTIONS</p>
+              <h3>한 장의 영수증을<br>필요한 만큼 나눠 기록하세요.</h3>
+              <p>읽어 온 품목을 확인하고, 필요한 품목만 선택해 각각 다른 분류로 저장할 수 있습니다. 공통 날짜·자산·분류도 한 번에 지정할 수 있어요.</p>
+              <div class="miniNote">같은 영수증에서 나온 거래는 서로 묶여 저장되어 나중에도 출처를 확인하기 쉽습니다.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -202,21 +228,8 @@
           <p class="sectionLead">수입과 지출만 합산하는 데서 끝나지 않습니다. 지난달과 달라진 점, 고정비와 변동비, 카드·할부, 자산 변화와 다음 달 예정까지 한 번에 돌아보세요.</p>
           <div class="quote">CashTory의 이름처럼, 매달 쌓인 기록이 하나의 돈 이야기가 되도록.</div>
         </div>
-        <div class="reviewBoard">
-          <div class="reviewTitle">CashTory · 9월 월말 마감 리뷰</div>
-          <div class="reviewHero">이번 달의 돈 이야기를<br>돌아볼까요?</div>
-          <div class="reviewNums">
-            <div class="reviewNum"><span>수입</span><b>6,030,000</b></div>
-            <div class="reviewNum"><span>지출</span><b>2,562,000</b></div>
-            <div class="reviewNum"><span>저축률</span><b>57%</b></div>
-          </div>
-          <div class="insight">식비 지출이 지난달보다 12% 줄었어요</div>
-          <div class="reviewRows">
-            <div><span>고정비</span><b>1,020,000원</b></div>
-            <div><span>남은 할부 원금</span><b>1,820,000원</b></div>
-            <div><span>월말 순자산</span><b>10,380,000원</b></div>
-            <div><span>다음 달 카드 결제</span><b>936,400원</b></div>
-          </div>
+        <div class="reviewCapture">
+          <img src="/cashtory/assets/monthly-review.webp" alt="CashTory 월말 마감 리뷰 실제 화면" loading="lazy">
         </div>
       </div>
     </section>
@@ -237,6 +250,18 @@
             <p class="sectionLead">통장·현금·카드·부채를 한곳에서 보고, 월별 비교와 최근 흐름을 통계로 확인하세요. 필요한 자산만 총액에 포함할 수도 있습니다.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="screenShowcase">
+      <div class="wrap showcaseGrid">
+        <div>
+          <p class="kicker">REAL SCREENS</p>
+          <h2>기록부터 분석까지,<br>한 앱 안에서 이어집니다.</h2>
+          <p class="sectionLead">자산과 곧 나갈 돈, 월별 통계, 홈 화면 위젯, 할부 관리까지 실제 CashTory 화면에서 확인해 보세요.</p>
+          <div class="screenTags"><span>자산</span><span>통계</span><span>위젯</span><span>할부 관리</span></div>
+        </div>
+        <img class="collage" src="/cashtory/assets/feature-collage.webp" alt="CashTory 자산, 통계, 위젯, 할부 실제 화면 모음" loading="lazy">
       </div>
     </section>
 
