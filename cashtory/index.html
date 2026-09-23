@@ -134,7 +134,7 @@
 .realWidgetCapture{max-width:560px;margin:0 auto;background:transparent;border:0;border-radius:30px;padding:0;box-shadow:none;overflow:hidden}
 .realWidgetCapture img{display:block;width:100%;height:auto;object-fit:contain;border-radius:24px;image-rendering:auto}
 @media(max-width:640px){.reviewPhone{border-radius:38px;padding:9px}.reviewPhoneScreen{border-radius:30px}.realWidgetCapture{max-width:100%}}
-@media(prefers-reduced-motion:reduce){.reviewPhoneScreen img{animation:none}}
+@media(prefers-reduced-motion:reduce){.reviewPhoneScreen img,.shotFrame img{animation:none}}
 
 /* Monthly review: use the uploaded JPG at its native 267px width.
    The file itself is not resized or recompressed; only CSS moves it vertically. */
@@ -143,7 +143,7 @@
 .reviewPhoneScreen img{display:block;width:267px;max-width:100%;height:auto;margin:0 auto;animation:reviewScroll 15s cubic-bezier(.65,0,.35,1) infinite alternate;will-change:transform}
 @keyframes reviewScroll{0%,10%{transform:translateY(0)}90%,100%{transform:translateY(calc(-100% + 628px))}}
 @media(max-width:320px){.reviewPhone{width:92vw;height:calc(92vw * 2.25)}.reviewPhoneScreen img{width:267px;max-width:100%}}
-@media(prefers-reduced-motion:reduce){.reviewPhoneScreen img{animation:none}}
+@media(prefers-reduced-motion:reduce){.reviewPhoneScreen img,.shotFrame img{animation:none}}
 .realWidgetCapture{max-width:700px}
 .realWidgetCapture img{width:100%;height:auto;object-fit:contain}
 </style>
