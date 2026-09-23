@@ -134,6 +134,13 @@
 .realWidgetCapture img{display:block;width:100%;height:auto;object-fit:contain;border-radius:24px;image-rendering:auto}
 @media(max-width:640px){.reviewPhone{border-radius:38px;padding:9px}.reviewPhoneScreen{border-radius:30px}.realWidgetCapture{max-width:100%}}
 @media(prefers-reduced-motion:reduce){.reviewPhoneScreen img{animation:none}}
+
+/* Preserve the monthly-review source at its native 328px width; never upscale it. */
+.reviewPhone{width:min(350px,92vw);aspect-ratio:350/760;padding:11px}
+.reviewPhoneScreen img{width:328px;max-width:100%;margin:0 auto}
+@keyframes reviewScroll{0%,12%{transform:translateY(0)}88%,100%{transform:translateY(calc(-100% + 738px))}}
+.realWidgetCapture{max-width:700px}
+.realWidgetCapture img{width:100%;height:auto;object-fit:contain}
 </style>
 </head>
 <body>
@@ -285,7 +292,7 @@
           <p class="sectionLead">이번 달 지출과 수입을 홈 화면에서 바로 확인하고, 지출·수입·영수증 촬영으로 곧바로 들어갈 수 있습니다.</p>
         </div>
         <div class="realWidgetCapture">
-          <img src="/cashtory/assets/widget-hq.jpg" alt="CashTory 실제 위젯이 안드로이드 홈 화면에 배치된 모습" loading="lazy">
+          <img src="/cashtory/assets/widgets-web.webp" alt="CashTory 실제 위젯이 안드로이드 홈 화면에 배치된 모습" loading="lazy">
         </div>
       </div>
     </section>
