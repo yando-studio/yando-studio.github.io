@@ -135,10 +135,14 @@
 @media(max-width:640px){.reviewPhone{border-radius:38px;padding:9px}.reviewPhoneScreen{border-radius:30px}.realWidgetCapture{max-width:100%}}
 @media(prefers-reduced-motion:reduce){.reviewPhoneScreen img{animation:none}}
 
-/* Preserve the monthly-review source at its native 328px width; never upscale it. */
-.reviewPhone{width:min(350px,92vw);aspect-ratio:350/760;padding:11px}
-.reviewPhoneScreen img{width:328px;max-width:100%;margin:0 auto}
-@keyframes reviewScroll{0%,12%{transform:translateY(0)}88%,100%{transform:translateY(calc(-100% + 738px))}}
+/* Monthly review: use the uploaded JPG at its native 267px width.
+   The file itself is not resized or recompressed; only CSS moves it vertically. */
+.reviewPhone{width:min(289px,92vw);height:650px;aspect-ratio:auto;padding:11px}
+.reviewPhoneScreen{height:100%;display:flex;justify-content:center;align-items:flex-start}
+.reviewPhoneScreen img{display:block;width:267px;max-width:100%;height:auto;margin:0 auto;animation:reviewScroll 15s cubic-bezier(.65,0,.35,1) infinite alternate;will-change:transform}
+@keyframes reviewScroll{0%,10%{transform:translateY(0)}90%,100%{transform:translateY(calc(-100% + 628px))}}
+@media(max-width:320px){.reviewPhone{width:92vw;height:calc(92vw * 2.25)}.reviewPhoneScreen img{width:267px;max-width:100%}}
+@media(prefers-reduced-motion:reduce){.reviewPhoneScreen img{animation:none}}
 .realWidgetCapture{max-width:700px}
 .realWidgetCapture img{width:100%;height:auto;object-fit:contain}
 </style>
@@ -247,7 +251,7 @@
         </div>
         <div class="reviewPhone" aria-label="CashTory 월말 마감 리뷰 스크롤 미리보기">
      <div class="reviewPhoneScreen">
-       <img src="/cashtory/assets/monthly-review.webp" alt="CashTory 월말 마감 리뷰 화면" loading="lazy">
+       <img src="/cashtory/assets/monthly-review.jpg?v=20260923" alt="CashTory 월말 마감 리뷰 화면" loading="lazy" decoding="async">
      </div>
    </div>
       </div>
