@@ -87,7 +87,7 @@ COPY = {
         "widgets_k": "WIDGETS",
         "widgets_h": "앱을 열지 않아도,<br>필요한 기능은 바로.",
         "widgets_lead": "이번 달 요약, 지출·수입 바로 입력, 영수증 촬영까지 위젯 6종. 바탕 투명도도 홈 화면에 맞게 고를 수 있어요.",
-        "widgets_img": ("/cashtory/assets/widgets-web.webp", "안드로이드 홈 화면에 배치한 CashTory 위젯"),
+        "widgets_img": ("/cashtory/assets/widgets.webp", "안드로이드 홈 화면에 배치한 CashTory 위젯"),
         "widgets_cards": [],
         "data_k": "YOUR DATA",
         "data_h": "내 기록은 내가 관리합니다.",
@@ -461,7 +461,8 @@ def page(lang: str) -> str:
     )
     if c["widgets_img"]:
         src, alt = c["widgets_img"]
-        widgets = f'<div class="widgetImg"><img src="{src}" alt="{e(alt)}" width="700" height="908" loading="lazy" decoding="async"></div>'
+        w, h = webp_size(ROOT / src.lstrip("/"))
+        widgets = f'<div class="widgetImg"><img src="{src}" alt="{e(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"></div>'
     else:
         widgets = '<div class="grid3">' + "".join(
             f'<div class="card"><b>{e(b)}</b><p>{e(p)}</p></div>' for b, p in c["widgets_cards"]
