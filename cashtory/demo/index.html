@@ -137,6 +137,10 @@
           var v = dict[el.dataset.i18n];
           if (v != null) el.innerHTML = v;
         });
+        // Send "back" links to the CashTory page in the same language.
+        document.querySelectorAll('a[href="/cashtory/"]').forEach(function (el) {
+          el.href = "/cashtory/" + lang + "/";
+        });
       }
 
       var frame = document.getElementById("app");
