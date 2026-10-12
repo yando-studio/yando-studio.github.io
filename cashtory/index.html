@@ -35,7 +35,6 @@
     .top{position:sticky;top:0;z-index:20;background:rgba(246,247,251,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(228,229,236,.8)}
     .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.03em}
-    .mark{width:34px;height:34px;border-radius:10px;background:#1C1147;color:white;display:grid;place-items:center;font-weight:900;font-size:14px;letter-spacing:-.08em}
     .brandIcon{width:36px;height:36px;border-radius:11px;display:block;box-shadow:0 4px 12px rgba(28,17,71,.16)}
     .realMedia{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:var(--shadow)}
     .realMediaGrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:26px;align-items:center}
@@ -45,8 +44,6 @@
     .mediaCopy h3{font-size:26px;letter-spacing:-.035em;margin:0 0 10px}
     .mediaCopy p{margin:0;color:var(--sub)}
     .mediaCopy .miniNote{margin-top:15px;padding:13px 15px;border-radius:14px;background:var(--accent-soft);color:#5547a1;font-size:13px;font-weight:700}
-    .reviewCapture{background:#fff;border-radius:26px;padding:8px;box-shadow:0 30px 80px rgba(0,0,0,.28);max-width:360px;margin:0 auto;overflow:hidden}
-    .reviewCapture img{display:block;width:100%;height:auto;border-radius:20px}
     .screenShowcase{padding:96px 0;background:#fff}
     .showcaseGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:42px;align-items:center}
     .collage{display:block;width:min(100%,430px);margin:0 auto;border-radius:28px;box-shadow:0 26px 70px rgba(31,25,62,.15);border:1px solid var(--line)}
@@ -67,23 +64,6 @@
     .phoneStage{position:relative;min-height:600px;display:grid;place-items:center}
     .halo{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#DDD7FF 0,#EFEAFF 48%,rgba(239,234,255,0) 72%)}
     .phone{position:relative;width:316px;border-radius:42px;background:#17181F;padding:10px;box-shadow:0 36px 90px rgba(31,25,62,.23);transform:rotate(2deg);overflow:hidden}.phoneShot{display:block;width:100%;height:auto;border-radius:34px}
-    .screen{min-height:570px;border-radius:34px;background:#F4F5F9;overflow:hidden;padding:22px 16px 18px}
-    .status{height:14px;width:88px;border-radius:99px;background:#17181F;margin:0 auto 16px}
-    .screenTop{display:flex;align-items:center;justify-content:space-between}
-    .screenTitle{font-size:20px;font-weight:850;letter-spacing:-.04em}
-    .avatar{width:31px;height:31px;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent);font-weight:900}
-    .summary{margin-top:15px;background:white;border:1px solid #DFE1E9;border-radius:18px;padding:16px}
-    .summary small{color:#8A8C97}
-    .money{margin-top:6px;font-size:27px;font-weight:900;letter-spacing:-.04em}
-    .balanceRow{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
-    .mini{border-radius:13px;padding:11px;background:#F8F8FB}
-    .mini b{display:block;margin-top:3px;font-size:15px}
-    .mini.in b{color:var(--income)} .mini.out b{color:var(--expense)}
-    .dateHead{margin-top:14px;background:var(--accent-soft);border-radius:11px;padding:8px 10px;font-size:12px;font-weight:800;color:var(--accent)}
-    .tx{margin-top:8px;background:#fff;border:1px solid #E5E6EC;border-radius:15px;padding:12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .txL{display:flex;align-items:center;gap:10px}.ico{width:34px;height:34px;border-radius:11px;background:#F1EFFA;color:var(--accent);display:grid;place-items:center;font-weight:900}
-    .tx strong{display:block;font-size:13px}.tx span{font-size:11px;color:#8A8C97}.amt{font-size:13px!important;font-weight:800;color:#333!important}
-    .fab{margin:18px auto 0;width:58px;height:58px;border-radius:20px;background:var(--accent);color:white;display:grid;place-items:center;font-size:31px;font-weight:300;box-shadow:0 12px 26px rgba(103,80,199,.3)}
     .floatCard{position:absolute;background:white;border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow);padding:12px 15px;font-size:13px;font-weight:750}
     .floatCard.one{left:-9px;top:120px}.floatCard.two{right:-4px;bottom:100px}.floatCard em{font-style:normal;color:var(--accent)}
     .trust{padding:0 0 72px}
@@ -110,21 +90,10 @@
     .reviewSec{padding:104px 0;background:#1C1640;color:#fff;overflow:hidden}
     .reviewSec .kicker{color:#BDB3FF}.reviewSec .sectionLead{color:#C9C7D8}
     .reviewGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
-    .reviewBoard{background:#F7F7FB;color:#1C1D22;border-radius:28px;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.27);transform:rotate(-1deg)}
-    .reviewTitle{font-size:13px;color:#787B87}.reviewHero{margin:4px 0 18px;font-size:26px;font-weight:900;letter-spacing:-.04em}
-    .reviewNums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.reviewNum{background:#fff;border:1px solid #E5E5EC;border-radius:15px;padding:12px}.reviewNum span{display:block;color:#8A8C97;font-size:11px}.reviewNum b{display:block;margin-top:4px;font-size:15px}
-    .insight{margin-top:10px;background:#ECE9F7;color:#4E3DA8;border-radius:15px;padding:13px;font-size:13px;font-weight:750}
-    .reviewRows{margin-top:10px;background:#fff;border:1px solid #E5E5EC;border-radius:15px;padding:5px 13px}.reviewRows div{display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid #EFEFF3;font-size:12px}.reviewRows div:first-child{border-top:0}.reviewRows span{color:#777A85}
     .quote{margin-top:28px;border-left:3px solid #8B7CE0;padding-left:18px;color:#DEDBF4;font-size:16px}
     .dataGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
     .dataCard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;display:flex;gap:15px}
     .dataCard i{font-style:normal;width:42px;height:42px;border-radius:13px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:900}.dataCard h3{margin:0 0 5px;font-size:18px}.dataCard p{margin:0;color:var(--sub);font-size:14px}
-    .realWidgetCapture{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:30px;padding:14px;box-shadow:var(--shadow);overflow:hidden}.realWidgetCapture img{display:block;width:100%;height:auto;border-radius:22px}
-    .widget{background:rgba(255,255,255,.92);border:1px solid #D9DAE1;border-radius:26px;padding:19px;box-shadow:0 18px 44px rgba(40,40,60,.13)}
-    .widget.large{min-height:210px}.widgetTitle{display:flex;justify-content:space-between;font-size:13px;font-weight:850}.widgetTitle em{font-style:normal;color:var(--accent)}
-    .widgetAmount{font-size:25px;font-weight:900;margin-top:18px}.wBar{height:7px;background:#EAEAF0;border-radius:99px;margin-top:14px;overflow:hidden}.wBar span{display:block;width:64%;height:100%;background:var(--accent);border-radius:99px}
-    .wBtns{display:flex;gap:8px;margin-top:20px}.wBtn{flex:1;background:var(--accent);color:#fff;border-radius:13px;padding:10px;text-align:center;font-size:12px;font-weight:800}.wBtn.alt{background:#ECE9F7;color:var(--accent)}
-    .widgetStack{display:grid;gap:12px}.smallWidget{background:rgba(255,255,255,.92);border:1px solid #D9DAE1;border-radius:22px;padding:16px;font-size:13px;font-weight:800;box-shadow:0 12px 28px rgba(40,40,60,.1)}
     .personal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.personalCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}.personalCard b{font-size:17px}.personalCard p{margin:7px 0 0;color:var(--sub);font-size:13px}
     .swatches{display:flex;gap:6px;margin-top:12px}.swatches span{width:18px;height:18px;border-radius:50%}
     .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:step}
@@ -133,33 +102,23 @@
     .centerCta{text-align:center;padding:110px 0 100px;background:#fff}.centerCta h2{max-width:720px;margin:0 auto}.centerCta p{color:var(--sub);margin:16px 0 28px}
     footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-size:13px}.footerRow{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}.footerLinks{display:flex;gap:16px;flex-wrap:wrap}
     @media(max-width:900px){
-      .navlinks a:not(.download){display:none}.heroGrid,.cardsLayout,.reviewGrid,.widgetStage,.realMediaGrid,.showcaseGrid{grid-template-columns:1fr}.phoneStage{min-height:540px}.trustGrid{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}.personal{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.reviewGrid{gap:30px}
+      .navlinks a:not(.download){display:none}.heroGrid,.cardsLayout,.reviewGrid,.realMediaGrid,.showcaseGrid{grid-template-columns:1fr}.phoneStage{min-height:540px}.trustGrid{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}.personal{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.reviewGrid{gap:30px}
     }
     @media(max-width:560px){
-      .wrap{width:min(calc(100% - 28px),var(--max))}.hero{padding-top:52px}.heroGrid{gap:32px}h1{font-size:44px}.lead{font-size:17px}.phone{width:286px}.screen{min-height:530px}.floatCard{display:none}.phoneStage{min-height:540px}.trustGrid,.dataGrid,.personal,.steps{grid-template-columns:1fr}.bulletGrid{grid-template-columns:1fr}.reviewNums{grid-template-columns:1fr}.nav{min-height:62px}.pill{min-height:42px;padding:0 15px}.widgetStage{padding:18px}
+      .wrap{width:min(calc(100% - 28px),var(--max))}.hero{padding-top:52px}.heroGrid{gap:32px}h1{font-size:44px}.lead{font-size:17px}.phone{width:286px}.floatCard{display:none}.phoneStage{min-height:540px}.trustGrid,.dataGrid,.personal,.steps{grid-template-columns:1fr}.bulletGrid{grid-template-columns:1fr}.nav{min-height:62px}.pill{min-height:42px;padding:0 15px}
     }
-  
-.reviewPhone{width:min(390px,88vw);aspect-ratio:390/820;margin:0 auto;background:#191a21;border-radius:48px;padding:11px;box-shadow:0 24px 70px rgba(42,35,82,.22);position:relative}
-.reviewPhone:before{content:"";position:absolute;z-index:3;top:24px;left:50%;transform:translateX(-50%);width:84px;height:16px;border-radius:999px;background:#0b0c10}
-.reviewPhoneScreen{height:100%;overflow:hidden;border-radius:38px;background:#f5f5f8;position:relative}
-.reviewPhoneScreen img{display:block;width:100%;height:auto;max-width:none;animation:reviewScroll 13s cubic-bezier(.65,0,.35,1) infinite alternate;will-change:transform}
-@keyframes reviewScroll{0%,12%{transform:translateY(0)}88%,100%{transform:translateY(calc(-100% + min(760px, calc(88vw * 1.95))))}}
-.realWidgetCapture{max-width:560px;margin:0 auto;background:transparent;border:0;border-radius:30px;padding:0;box-shadow:none;overflow:hidden}
-.realWidgetCapture img{display:block;width:100%;height:auto;object-fit:contain;border-radius:24px;image-rendering:auto}
-@media(max-width:640px){.reviewPhone{border-radius:38px;padding:9px}.reviewPhoneScreen{border-radius:30px}.realWidgetCapture{max-width:100%}}
-@media(prefers-reduced-motion:reduce){.reviewPhoneScreen img,.shotFrame img{animation:none}}
-
-/* Monthly review: use the uploaded JPG at its native 267px width.
-   The file itself is not resized or recompressed; only CSS moves it vertically. */
-.reviewPhone{width:min(289px,92vw);height:650px;aspect-ratio:auto;padding:11px}
-.reviewPhoneScreen{height:100%;display:flex;justify-content:center;align-items:flex-start}
-.reviewPhoneScreen img{display:block;width:267px;max-width:100%;height:auto;margin:0 auto;animation:reviewScroll 15s cubic-bezier(.65,0,.35,1) infinite alternate;will-change:transform}
-@keyframes reviewScroll{0%,10%{transform:translateY(0)}90%,100%{transform:translateY(calc(-100% + 628px))}}
-@media(max-width:320px){.reviewPhone{width:92vw;height:calc(92vw * 2.25)}.reviewPhoneScreen img{width:267px;max-width:100%}}
-@media(prefers-reduced-motion:reduce){.reviewPhoneScreen img,.shotFrame img{animation:none}}
-.realWidgetCapture{max-width:700px}
-.realWidgetCapture img{width:100%;height:auto;object-fit:contain}
-</style>
+    /* Monthly review: CSS scrolls the tall screenshot inside a phone frame. */
+    .reviewPhone{width:min(289px,92vw);height:650px;margin:0 auto;background:#191a21;border-radius:48px;padding:11px;box-shadow:0 24px 70px rgba(42,35,82,.22);position:relative}
+    .reviewPhone:before{content:"";position:absolute;z-index:3;top:24px;left:50%;transform:translateX(-50%);width:84px;height:16px;border-radius:999px;background:#0b0c10}
+    .reviewPhoneScreen{height:100%;overflow:hidden;border-radius:38px;background:#f5f5f8;position:relative;display:flex;justify-content:center;align-items:flex-start}
+    .reviewPhoneScreen img{display:block;width:267px;max-width:100%;height:auto;margin:0 auto;animation:reviewScroll 15s cubic-bezier(.65,0,.35,1) infinite alternate;will-change:transform}
+    @keyframes reviewScroll{0%,10%{transform:translateY(0)}90%,100%{transform:translateY(calc(-100% + 628px))}}
+    .realWidgetCapture{max-width:700px;margin:0 auto;border-radius:30px;overflow:hidden}
+    .realWidgetCapture img{display:block;width:100%;height:auto;border-radius:24px}
+    @media(max-width:640px){.reviewPhone{border-radius:38px}.reviewPhoneScreen{border-radius:30px}}
+    @media(max-width:320px){.reviewPhone{width:92vw;height:calc(92vw * 2.25)}}
+    @media(prefers-reduced-motion:reduce){.reviewPhoneScreen img,.shotFrame img{animation:none}}
+  </style>
 </head>
 <body>
   <header class="top">
@@ -217,7 +176,7 @@
         </div>
         <div class="realMedia">
           <div class="realMediaGrid">
-            <div class="shotFrame"><img src="/cashtory/assets/receipt-items.jpg?v=20260923" alt="CashTory 영수증 품목별 저장 실제 화면" loading="lazy"></div>
+            <div class="shotFrame"><img src="/cashtory/assets/receipt-items.webp?v=20261012" alt="CashTory 영수증 품목별 저장 실제 화면" loading="lazy"></div>
             <div class="mediaCopy">
               <p class="kicker">RECEIPT TO TRANSACTIONS</p>
               <h3>한 장의 영수증을<br>필요한 만큼 나눠 기록하세요.</h3>
@@ -265,7 +224,7 @@
         </div>
         <div class="reviewPhone" aria-label="CashTory 월말 마감 리뷰 스크롤 미리보기">
      <div class="reviewPhoneScreen">
-       <img src="/cashtory/assets/monthly-review.jpg?v=20260923" alt="CashTory 월말 마감 리뷰 화면" loading="lazy" decoding="async">
+       <img src="/cashtory/assets/monthly-review.webp?v=20261012" alt="CashTory 월말 마감 리뷰 화면" loading="lazy" decoding="async">
      </div>
    </div>
       </div>
