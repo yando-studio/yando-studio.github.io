@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#6750C7" />
+  <meta name="description" content="CashTory를 설치하지 않고 브라우저에서 바로 사용해 보세요. 1년치 예시 기록이 들어 있는 실제 앱 화면입니다." />
+  <link rel="canonical" href="https://yandostudio.co.kr/cashtory/demo/" />
+  <link rel="icon" href="/cashtory/assets/favicon-48.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/cashtory/assets/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Y&amp;O STUDIO" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:url" content="https://yandostudio.co.kr/cashtory/demo/" />
+  <meta property="og:title" content="CashTory 체험판 — 설치 없이 둘러보기" />
+  <meta property="og:description" content="1년치 예시 기록이 들어 있는 실제 앱 화면을 브라우저에서 바로 사용해 보세요." />
+  <meta property="og:image" content="https://yandostudio.co.kr/cashtory/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>CashTory 체험판</title>
+  <style>
+    :root{
+      --accent:#6750C7;--accent-soft:#ECE9F7;--bg:#F6F7FB;--text:#1C1D22;--sub:#747783;--line:#E4E5EC;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo","Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+    :root:lang(ko) body{word-break:keep-all}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer}
+
+    .layout{min-height:100%;display:grid;grid-template-columns:minmax(0,420px) auto;gap:64px;align-items:center;justify-content:center;padding:40px 24px}
+    .back{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--accent)}
+    .brand{display:flex;align-items:center;gap:12px;margin:28px 0 0;font-size:22px;font-weight:850;letter-spacing:-.03em}
+    .brand img{width:44px;height:44px;border-radius:12px;box-shadow:0 4px 12px rgba(28,17,71,.16)}
+    h1{margin:18px 0 0;font-size:clamp(32px,4vw,44px);line-height:1.15;letter-spacing:-.045em}
+    .lead{margin:16px 0 0;color:var(--sub);font-size:17px}
+    .tips{margin:24px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    .tips li{display:flex;gap:10px;font-size:15px}
+    .tips li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--accent)}
+    .note{margin:22px 0 0;padding:14px 16px;border-radius:14px;background:var(--accent-soft);color:#4f409e;font-size:14px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .pill{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;border:0;background:var(--accent);color:#fff;font-weight:800;box-shadow:0 8px 18px rgba(103,80,199,.22)}
+    .pill.ghost{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:none}
+
+    .phone{position:relative;width:390px;height:min(844px,calc(100vh - 80px));min-height:640px;border-radius:52px;background:#17181F;padding:12px;box-shadow:0 36px 90px rgba(31,25,62,.23)}
+    .phone iframe{display:block;width:100%;height:100%;border:0;border-radius:40px;background:#fff}
+    .loading{position:absolute;inset:12px;border-radius:40px;display:grid;place-items:center;background:var(--bg);color:var(--sub);font-size:14px;transition:opacity .3s}
+    .loading.done{opacity:0;pointer-events:none}
+
+    .bar{display:none}
+
+    /* Phones: the app fills the screen under a slim bar. */
+    @media (max-width:860px){
+      html,body{overflow:hidden}
+      .layout{display:block;height:100%;min-height:0;padding:0}
+      .intro{display:none}
+      .bar{display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;padding-top:env(safe-area-inset-top);box-sizing:content-box;background:#1C1640;color:#fff;font-size:13px}
+      .bar b{font-weight:800}
+      .bar span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#C9C7D8}
+      .bar a,.bar button{flex:none;height:32px;padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:12px;font-weight:700;display:inline-flex;align-items:center}
+      .bar a.play{background:var(--accent);border-color:var(--accent)}
+      .phone{width:100%;height:calc(100% - 48px - env(safe-area-inset-top));min-height:0;border-radius:0;padding:0;background:none;box-shadow:none}
+      .phone iframe,.loading{border-radius:0}
+      .loading{inset:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <a href="/cashtory/" aria-label="CashTory" data-i18n="barBack">←</a>
+    <span><b data-i18n="barTitle">체험판</b> · <span data-i18n="barNote">입력한 내용은 저장되지 않아요</span></span>
+    <button type="button" class="reset" data-i18n="reset">처음부터</button>
+    <a class="play" href="https://play.google.com/store/apps/details?id=com.yandostudio.cashtory">Google Play</a>
+  </div>
+
+  <main class="layout">
+    <section class="intro">
+      <a class="back" href="/cashtory/" data-i18n="back">← CashTory 소개</a>
+      <div class="brand"><img src="/cashtory/assets/app-icon.webp" alt="" width="44" height="44"><span>CashTory</span></div>
+      <h1 data-i18n="title">설치 없이,<br>실제 앱 그대로.</h1>
+      <p class="lead" data-i18n="lead">1년치 예시 기록이 들어 있는 CashTory를 브라우저에서 직접 눌러 보세요.</p>
+      <ul class="tips">
+        <li data-i18n="tip1">가운데 + 버튼으로 지출을 직접 입력해 보세요</li>
+        <li data-i18n="tip2">통계 탭에서 이번 달 흐름과 6개월 추이를 확인하세요</li>
+        <li data-i18n="tip3">가계부 위 배너에서 지난달 월말 리뷰를 열어 보세요</li>
+        <li data-i18n="tip4">자산 탭에서 카드 결제 예정과 할부를 살펴보세요</li>
+      </ul>
+      <p class="note" data-i18n="note">체험판에서 입력한 내용은 저장되지 않고, 새로고침하면 처음으로 돌아갑니다. 영수증 촬영·홈 화면 위젯·백업은 앱에서 사용할 수 있어요.</p>
+      <div class="actions">
+        <a class="pill" href="https://play.google.com/store/apps/details?id=com.yandostudio.cashtory" data-i18n="play">Google Play에서 받기</a>
+        <button type="button" class="pill ghost reset" data-i18n="resetLong">처음부터 다시</button>
+      </div>
+    </section>
+
+    <div class="phone">
+      <iframe id="app" src="app/" title="CashTory" allow="clipboard-write"></iframe>
+      <div class="loading" id="loading" data-i18n="loading">앱을 불러오는 중…</div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      // The app inside follows the browser language, so the frame text does too.
+      var messages = {
+        en: {
+          barBack: "←", barTitle: "Demo", barNote: "Nothing you enter is saved", reset: "Restart",
+          back: "← About CashTory",
+          title: "No install.<br>The real app.",
+          lead: "Try CashTory right in your browser, filled with a year of sample records.",
+          tip1: "Tap the center + button to add an expense",
+          tip2: "Open Stats to see this month and the 6-month trend",
+          tip3: "Open last month's review from the banner on the ledger",
+          tip4: "Check upcoming card payments and installments in Assets",
+          note: "Nothing you enter here is saved; reloading starts over. Receipt scanning, home screen widgets and backups are available in the app.",
+          play: "Get it on Google Play", resetLong: "Start over", loading: "Loading the app…"
+        },
+        ja: {
+          barBack: "←", barTitle: "体験版", barNote: "入力した内容は保存されません", reset: "最初から",
+          back: "← CashTory について",
+          title: "インストールなしで、<br>実際のアプリそのまま。",
+          lead: "1年分のサンプル記録が入った CashTory を、ブラウザでそのまま操作してみてください。",
+          tip1: "中央の + ボタンで支出を入力してみましょう",
+          tip2: "統計タブで今月の流れと6か月の推移を確認できます",
+          tip3: "家計簿の上のバナーから先月の月末レビューを開けます",
+          tip4: "資産タブでカードの支払予定と分割払いを見てみましょう",
+          note: "体験版で入力した内容は保存されず、再読み込みすると最初に戻ります。レシート撮影・ホーム画面ウィジェット・バックアップはアプリで利用できます。",
+          play: "Google Play で入手", resetLong: "最初からやり直す", loading: "アプリを読み込み中…"
+        }
+      };
+      var lang = (navigator.language || "ko").slice(0, 2);
+      var dict = messages[lang];
+      if (dict) {
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          var v = dict[el.dataset.i18n];
+          if (v != null) el.innerHTML = v;
+        });
+      }
+
+      var frame = document.getElementById("app");
+      var loading = document.getElementById("loading");
+      frame.addEventListener("load", function () {
+        // The app needs a moment after load to open its database and fill sample data.
+        setTimeout(function () { loading.classList.add("done"); }, 1200);
+      });
+      document.querySelectorAll(".reset").forEach(function (b) {
+        b.addEventListener("click", function () {
+          loading.classList.remove("done");
+          frame.src = "app/?t=" + Date.now();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
