@@ -1,9 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Y&O STUDIO — Simple, useful apps for everyday life." />
+  <meta name="description" content="Y&O STUDIO — 일상을 조금 더 가볍게 만드는 실용적인 앱을 만듭니다." />
+  <link rel="canonical" href="https://yandostudio.co.kr/" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Y&amp;O STUDIO" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:url" content="https://yandostudio.co.kr/" />
+  <meta property="og:title" content="Y&amp;O STUDIO" />
+  <meta property="og:description" content="일상을 가볍게 만드는 작고 쓸모 있는 앱을 만듭니다." />
+  <meta property="og:image" content="https://yandostudio.co.kr/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Y&O STUDIO</title>
   <style>
     :root {
@@ -12,6 +25,7 @@
       --text: #151515;
       --muted: #6f6f6a;
       --line: #e8e8e3;
+      --line-strong: #cfcfc8;
       --accent: #111111;
       --radius: 22px;
       --max: 980px;
@@ -29,9 +43,12 @@
       font-family:
         Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple SD Gothic Neo",
-        "Noto Sans KR", sans-serif;
+        "Noto Sans KR", "Hiragino Sans", "Noto Sans JP", sans-serif;
       line-height: 1.6;
     }
+
+    /* Keep Korean words intact; Japanese has no spaces and must wrap anywhere. */
+    :root:lang(ko) body { word-break: keep-all; }
 
     a {
       color: inherit;
@@ -60,9 +77,42 @@
       letter-spacing: .04em;
     }
 
+    .navRight {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
     .contact {
       font-size: 14px;
       color: var(--muted);
+    }
+
+    .lang {
+      display: inline-flex;
+      padding: 3px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+    }
+
+    .lang button {
+      min-width: 38px;
+      height: 30px;
+      padding: 0 10px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .lang button[aria-pressed="true"] {
+      background: var(--accent);
+      color: var(--bg);
     }
 
     .hero {
@@ -81,8 +131,8 @@
     h1 {
       margin: 0;
       max-width: 760px;
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.03;
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1.1;
       letter-spacing: -0.045em;
     }
 
@@ -93,39 +143,84 @@
       color: var(--muted);
     }
 
+    .sectionTitle {
+      margin: 0 0 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
     .apps {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 20px;
-      padding-bottom: 78px;
     }
 
     .card {
+      position: relative;
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 30px;
-      min-height: 290px;
+      min-height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       box-shadow: 0 10px 30px rgba(0,0,0,.035);
+      transition: border-color .15s ease, transform .15s ease;
     }
+
+    .card.linked:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-2px);
+    }
+
+    .appHead {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .appIcon {
+      width: 56px;
+      height: 56px;
+      flex: none;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    }
+
 
     .app-name {
       margin: 0;
-      font-size: 30px;
+      font-size: 28px;
       line-height: 1.15;
       letter-spacing: -0.03em;
     }
 
+    .app-tag {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Stretch the main link over the whole card; other buttons sit above it. */
+    .app-name a::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius);
+    }
+
     .app-desc {
-      margin: 14px 0 0;
+      margin: 20px 0 0;
       color: var(--muted);
       font-size: 16px;
     }
 
     .links {
+      position: relative;
       margin-top: 34px;
       display: flex;
       flex-wrap: wrap;
@@ -139,7 +234,7 @@
       padding: 0 15px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: #fff;
+      background: var(--surface);
       font-size: 14px;
       font-weight: 650;
       transition: transform .15s ease, border-color .15s ease;
@@ -147,7 +242,37 @@
 
     .button:hover {
       transform: translateY(-1px);
-      border-color: #cfcfc8;
+      border-color: var(--line-strong);
+    }
+
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg);
+    }
+
+    .about {
+      margin-top: 96px;
+      padding: 56px 0 88px;
+      border-top: 1px solid var(--line);
+    }
+
+    .aboutGrid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .value h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .value p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
     }
 
     footer {
@@ -167,21 +292,35 @@
 
     @media (max-width: 720px) {
       .hero {
-        padding: 68px 0 52px;
+        padding: 64px 0 52px;
       }
 
-      .apps {
+      h1 br {
+        display: none;
+      }
+
+      .apps,
+      .aboutGrid {
         grid-template-columns: 1fr;
-        padding-bottom: 56px;
       }
 
       .card {
-        min-height: 250px;
+        min-height: 0;
+      }
+
+      .about {
+        margin-top: 64px;
+        padding-bottom: 64px;
       }
 
       .contact {
         display: none;
       }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card, .button { transition: none; }
+      .card.linked:hover, .button:hover { transform: none; }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -191,10 +330,8 @@
         --text: #f2f2ef;
         --muted: #a8a8a1;
         --line: #2b2b2b;
-      }
-
-      .button {
-        background: #181818;
+        --line-strong: #444;
+        --accent: #f2f2ef;
       }
 
       .card {
@@ -207,67 +344,186 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="/">Y&O STUDIO</a>
-      <a class="contact" href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a>
+      <div class="navRight">
+        <a class="contact" href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="ko" aria-pressed="true">KO</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="ja" aria-pressed="false">JA</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="wrap">
-        <p class="eyebrow">Independent App Studio</p>
-        <h1>Simple apps for everyday life.</h1>
-        <p class="lead">
-          Y&O STUDIO creates practical mobile apps designed to make everyday
-          routines easier to manage.
+        <p class="eyebrow" data-i18n="eyebrow">Independent App Studio</p>
+        <h1 data-i18n="title">일상을 가볍게 만드는 <br>작고 쓸모 있는 앱.</h1>
+        <p class="lead" data-i18n="lead">
+          Y&O STUDIO는 매일 반복되는 기록과 관리를 조금 더 쉽게 만드는
+          실용적인 모바일 앱을 만듭니다.
         </p>
       </div>
     </section>
 
-    <section class="wrap apps" aria-label="Apps">
-      <article class="card">
-        <div>
-          <h2 class="app-name">CashTory</h2>
-          <p class="app-desc">
-            Personal finance and household budget management, from everyday
-            spending records to assets, liabilities, recurring transactions
-            and installments.
-          </p>
-        </div>
-        <div class="links">
-          <a class="button" href="/cashtory/">
-            자세히 보기
-          </a>
-          <a class="button" href="https://play.google.com/store/apps/details?id=com.yandostudio.cashtory">
-            Google Play
-          </a>
-          <a class="button" href="https://yando-studio.github.io/cashtory-privacy/">
-            Privacy Policy
-          </a>
-        </div>
-      </article>
+    <section class="wrap" aria-labelledby="apps-title">
+      <h2 class="sectionTitle" id="apps-title" data-i18n="appsTitle">우리의 앱</h2>
+      <div class="apps">
+        <article class="card linked">
+          <div>
+            <div class="appHead">
+              <img class="appIcon" src="/cashtory/assets/app-icon.webp" alt="" width="56" height="56">
+              <div>
+                <h3 class="app-name"><a href="/cashtory/">CashTory</a></h3>
+                <p class="app-tag" data-i18n="cashtoryTag">생활 가계부</p>
+              </div>
+            </div>
+            <p class="app-desc" data-i18n="cashtoryDesc">
+              영수증 입력부터 카드·할부, 자산·부채, 월말 리뷰까지.
+              회원가입 없이 바로 시작하는 가계부입니다.
+            </p>
+          </div>
+          <div class="links">
+            <a class="button primary" href="/cashtory/" data-i18n="learnMore">자세히 보기</a>
+            <a class="button" href="https://play.google.com/store/apps/details?id=com.yandostudio.cashtory">Google Play</a>
+            <a class="button" href="https://yando-studio.github.io/cashtory-privacy/" data-i18n="privacy">개인정보처리방침</a>
+          </div>
+        </article>
 
-      <article class="card">
-        <div>
-          <h2 class="app-name">ShelfTory</h2>
-          <p class="app-desc">
-            Inventory and expiration-date management for food, household
-            supplies and everyday stock.
-          </p>
+        <article class="card linked">
+          <div>
+            <div class="appHead">
+              <img class="appIcon" src="/shelftory/assets/app-icon.webp" alt="" width="56" height="56">
+              <div>
+                <h3 class="app-name"><a href="https://play.google.com/store/apps/details?id=com.yandostudio.shelftory">ShelfTory</a></h3>
+                <p class="app-tag" data-i18n="shelftoryTag">물품 · 유통기한 관리</p>
+              </div>
+            </div>
+            <p class="app-desc" data-i18n="shelftoryDesc">
+              남은 물품과 유통기한을 한눈에. 영수증·바코드 등록부터
+              장보기와 이번 주 메뉴까지 간편하게 관리합니다.
+            </p>
+          </div>
+          <div class="links">
+            <a class="button primary" href="https://play.google.com/store/apps/details?id=com.yandostudio.shelftory">Google Play</a>
+            <a class="button" href="https://yando-studio.github.io/Shelftory-privacy/" data-i18n="privacy">개인정보처리방침</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap about" aria-labelledby="about-title">
+      <h2 class="sectionTitle" id="about-title" data-i18n="aboutTitle">우리가 앱을 만드는 방식</h2>
+      <div class="aboutGrid">
+        <div class="value">
+          <h3 data-i18n="v1Title">단순하게</h3>
+          <p data-i18n="v1Desc">꼭 필요한 기능을 쉽게 찾고 바로 쓸 수 있도록 만듭니다.</p>
         </div>
-        <div class="links">
-          <a class="button" href="https://yando-studio.github.io/Shelftory-privacy/">
-            Privacy Policy
-          </a>
+        <div class="value">
+          <h3 data-i18n="v2Title">내 기기에서</h3>
+          <p data-i18n="v2Desc">회원가입 없이 시작하고, 기록은 기본적으로 사용자의 기기에 저장합니다.</p>
         </div>
-      </article>
+        <div class="value">
+          <h3 data-i18n="v3Title">꾸준히</h3>
+          <p data-i18n="v3Desc">사용자의 의견을 듣고 매일 쓰기 좋은 앱이 되도록 계속 다듬습니다.</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap footer-row">
       <span>© 2026 Y&O STUDIO</span>
-      <a href="mailto:official.yo.studio@gmail.com">Contact</a>
+      <a href="mailto:official.yo.studio@gmail.com" data-i18n="contact">문의하기</a>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var messages = {
+        en: {
+          eyebrow: "Independent App Studio",
+          title: "Small, useful apps <br>for everyday life.",
+          lead: "Y&O STUDIO builds practical mobile apps that make everyday records and routines a little easier to manage.",
+          appsTitle: "Our Apps",
+          cashtoryTag: "Household budget",
+          cashtoryDesc: "From receipt scanning to cards and installments, assets and liabilities, and a monthly review. A budget app you can start without signing up.",
+          shelftoryTag: "Household items & expiration dates",
+          shelftoryDesc: "See what you have left and when it expires at a glance. Add items from receipts or barcodes, then plan shopping lists and this week\u2019s menu.",
+          learnMore: "Learn more",
+          privacy: "Privacy Policy",
+          aboutTitle: "How we build apps",
+          v1Title: "Simple",
+          v1Desc: "We focus on the features you actually need, easy to find and ready to use.",
+          v2Title: "On your device",
+          v2Desc: "No sign-up required. Your records are stored on your own device by default.",
+          v3Title: "Always improving",
+          v3Desc: "We listen to feedback and keep refining our apps for daily use.",
+          contact: "Contact",
+          description: "Y&O STUDIO builds small, practical apps that make everyday life a little easier."
+        },
+        ja: {
+          eyebrow: "Independent App Studio",
+          title: "毎日を軽くする、<br>小さくて役立つアプリ。",
+          lead: "Y&O STUDIOは、毎日の記録や管理を少しだけ楽にする実用的なモバイルアプリを作っています。",
+          appsTitle: "アプリ",
+          cashtoryTag: "家計簿",
+          cashtoryDesc: "レシート入力からカード・分割払い、資産・負債、月末レビューまで。会員登録なしですぐに始められる家計簿です。",
+          shelftoryTag: "日用品・賞味期限管理",
+          shelftoryDesc: "残りの品物と賞味期限をひと目で。レシートやバーコードで登録し、買い物リストや今週の献立までまとめて管理できます。",
+          learnMore: "詳しく見る",
+          privacy: "プライバシーポリシー",
+          aboutTitle: "私たちのアプリづくり",
+          v1Title: "シンプルに",
+          v1Desc: "本当に必要な機能を、すぐに見つけて使えるように作ります。",
+          v2Title: "端末の中に",
+          v2Desc: "会員登録は不要です。記録は基本的にご自身の端末に保存されます。",
+          v3Title: "改善を続ける",
+          v3Desc: "皆さまの声を聞きながら、毎日使いやすいアプリへと磨き続けます。",
+          contact: "お問い合わせ",
+          description: "Y&O STUDIOは、毎日を少し楽にする実用的なアプリを作っています。"
+        }
+      };
+
+      // Korean is the markup default; capture it so we can switch back.
+      var nodes = document.querySelectorAll("[data-i18n]");
+      var ko = {};
+      nodes.forEach(function (el) { ko[el.dataset.i18n] = el.innerHTML; });
+      var metaDesc = document.querySelector('meta[name="description"]');
+      ko.description = metaDesc.content;
+      messages.ko = ko;
+
+      function apply(lang) {
+        var dict = messages[lang] || messages.ko;
+        nodes.forEach(function (el) {
+          var key = el.dataset.i18n;
+          if (dict[key] != null) el.innerHTML = dict[key];
+        });
+        metaDesc.content = dict.description;
+        document.documentElement.lang = lang;
+        document.querySelectorAll(".lang button").forEach(function (b) {
+          b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+        });
+      }
+
+      function save(lang) {
+        try { localStorage.setItem("yo-lang", lang); } catch (e) {}
+      }
+
+      var initial = new URLSearchParams(location.search).get("lang");
+      if (!messages[initial]) {
+        try { initial = localStorage.getItem("yo-lang"); } catch (e) { initial = null; }
+      }
+      if (messages[initial] && initial !== "ko") apply(initial);
+
+      document.querySelectorAll(".lang button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          apply(b.dataset.lang);
+          save(b.dataset.lang);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
