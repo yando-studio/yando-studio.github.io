@@ -455,7 +455,9 @@ def page(lang: str) -> str:
     alternates = "\n".join(
         f'  <link rel="alternate" hreflang="{l}" href="{SITE}{PATHS[l]}" />' for l in LANGS
     ) + f'\n  <link rel="alternate" hreflang="x-default" href="{SITE}{PATHS["ko"]}" />'
-    nav = "".join(f'<a href="{h}">{e(t)}</a>' for h, t in c["nav"])
+    # The demo follows the browser language unless told otherwise, so pass this page's language along.
+    demo = f"/cashtory/demo/?lang={lang}"
+    nav = "".join(f'<a href="{demo if h == "/cashtory/demo/" else h}">{e(t)}</a>' for h, t in c["nav"])
     langs = "".join(
         f'<a href="{PATHS[l]}" hreflang="{l}" lang="{l}"' + (' aria-current="page"' if l == lang else "")
         + f'>{l.upper()}</a>' for l in LANGS
@@ -552,7 +554,7 @@ def page(lang: str) -> str:
           <p class="lead">{e(c['hero_lead'])}</p>
           <div class="cta">
             <a class="pill" href="{PLAY}">{e(c['hero_play'])}</a>
-            <a class="pill ghost" href="/cashtory/demo/">{e(c['hero_demo'])}</a>
+            <a class="pill ghost" href="{demo}">{e(c['hero_demo'])}</a>
           </div>
           <div class="micro">{e(c['hero_micro'])}</div>
         </div>
@@ -707,7 +709,7 @@ def page(lang: str) -> str:
           <h2>{c['try_h']}</h2>
           <p>{e(c['try_p'])}</p>
         </div>
-        <a class="pill" href="/cashtory/demo/">{e(c['try_btn'])}</a>
+        <a class="pill" href="{demo}">{e(c['try_btn'])}</a>
       </div>
     </section>
 
