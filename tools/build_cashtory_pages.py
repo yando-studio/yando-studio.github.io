@@ -305,7 +305,7 @@ LANG_LABEL = {"ko": "한국어", "ja": "日本語", "en": "English"}
 SWATCHES = ["#6750C7", "#2B67C2", "#117872", "#33754D", "#BA3E6E"]
 
 CSS = """
-:root{--accent:#6750C7;--accent-soft:#ECE9F7;--bg:#F6F7FB;--card:#fff;--text:#1C1D22;--sub:#747783;--line:#E4E5EC;--shadow:0 18px 55px rgba(36,28,75,.09);--max:1120px}
+:root{--accent:#6750C7;--accent-soft:#ECE9F7;--point:#6750C7;--point-soft:#ECE9F7;--bg:#F6F7FB;--card:#fff;--text:#1C1D22;--sub:#747783;--line:#E4E5EC;--shadow:0 18px 55px rgba(36,28,75,.09);--max:1120px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo","Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
@@ -320,7 +320,7 @@ img{display:block;max-width:100%;height:auto}
 .brand img{width:36px;height:36px;border-radius:11px;box-shadow:0 4px 12px rgba(28,17,71,.16)}
 .navRight{display:flex;align-items:center;gap:20px}
 .navlinks{display:flex;align-items:center;gap:20px;font-size:14px;color:#565965;font-weight:650}
-.navlinks a:hover{color:var(--accent)}
+.navlinks a:hover{color:var(--point)}
 .lang{display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:12px;font-weight:800}
 .lang a{padding:4px 9px;border-radius:999px;color:var(--sub)}
 .lang a[aria-current]{background:var(--accent);color:#fff}
@@ -329,8 +329,8 @@ img{display:block;max-width:100%;height:auto}
 .pill.small{min-height:40px;padding:0 16px;font-size:14px}
 .hero{padding:72px 0 64px;overflow:hidden}
 .heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.08em}
-.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;font-size:13px;font-weight:800;color:var(--point);letter-spacing:.08em}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--point)}
 h1{margin:0;font-size:clamp(38px,4.9vw,62px);line-height:1.08;letter-spacing:-.05em}
 h2{margin:0;font-size:clamp(30px,4.2vw,48px);line-height:1.15;letter-spacing:-.045em}
 .lead{margin:22px 0 0;max-width:600px;font-size:clamp(17px,2vw,20px);color:var(--sub)}
@@ -342,7 +342,7 @@ h2{margin:0;font-size:clamp(30px,4.2vw,48px);line-height:1.15;letter-spacing:-.0
 .phone img{width:100%;border-radius:36px}
 .hero .phone{transform:rotate(2deg)}
 .float{position:absolute;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:11px 15px;font-size:13px;font-weight:750;line-height:1.4}
-.float em{display:block;font-style:normal;color:var(--accent)}
+.float em{display:block;font-style:normal;color:var(--point)}
 .float.one{left:0;top:110px}.float.two{right:0;bottom:110px}
 .trust{padding:0 0 64px}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
@@ -352,7 +352,7 @@ section.block{padding:96px 0}
 .tint{background:linear-gradient(180deg,#F0EDFB,#F7F6FC)}
 .white{background:#fff}
 .head{max-width:720px;margin-bottom:36px}
-.kicker{margin:0 0 10px;color:var(--accent);font-size:13px;font-weight:850;letter-spacing:.08em}
+.kicker{margin:0 0 10px;color:var(--point);font-size:13px;font-weight:850;letter-spacing:.08em}
 .sectionLead{margin:16px 0 0;color:var(--sub);font-size:17px}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .split.rev>.media{order:-1}
@@ -361,7 +361,7 @@ section.block{padding:96px 0}
 .shots{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;width:min(600px,100%)}
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
 .feature{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}
-.featureIcon{width:42px;height:42px;border-radius:14px;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent);font-size:19px;font-weight:900}
+.featureIcon{width:42px;height:42px;border-radius:14px;background:var(--point-soft);display:grid;place-items:center;color:var(--point);font-size:19px;font-weight:900}
 .feature h3{margin:18px 0 6px;font-size:19px;letter-spacing:-.03em}.feature p{margin:0;color:var(--sub);font-size:14px}
 .inputMedia{display:flex;justify-content:center;gap:24px;margin-top:48px}
 .inputMedia .phone{width:min(280px,44vw)}
@@ -370,10 +370,10 @@ section.block{padding:96px 0}
 .scrollShot img{width:100%;border-radius:23px;animation:shotScroll 12s cubic-bezier(.65,0,.35,1) infinite alternate}
 @keyframes shotScroll{0%,10%{transform:translateY(0)}90%,100%{transform:translateY(calc(-100% + 544px))}}
 .receipt h3{font-size:26px;letter-spacing:-.035em;margin:0 0 10px;line-height:1.3}.receipt p{margin:0;color:var(--sub)}
-.note{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--accent-soft);color:#5547a1;font-size:13px;font-weight:700}
+.note{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--point-soft);color:#5547a1;font-size:13px;font-weight:700}
 .list{display:grid;gap:14px;margin-top:26px}
 .listItem{display:flex;gap:12px;align-items:flex-start}
-.check{flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:12px;font-weight:900}
+.check{flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--point-soft);color:var(--point);display:grid;place-items:center;font-size:12px;font-weight:900}
 .listItem b{display:block;font-size:15px}.listItem small{color:var(--sub);font-size:14px}
 .reviewSec{padding:104px 0;background:#1C1640;color:#fff;overflow:hidden}
 .reviewSec .kicker{color:#BDB3FF}.reviewSec .sectionLead{color:#C9C7D8}
@@ -390,7 +390,7 @@ section.block{padding:96px 0}
 .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}
 .card b{font-size:17px}.card p{margin:6px 0 0;color:var(--sub);font-size:14px}
 .dataCard{display:flex;gap:14px}
-.dataCard i{flex:none;font-style:normal;width:42px;height:42px;border-radius:13px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:900}
+.dataCard i{flex:none;font-style:normal;width:42px;height:42px;border-radius:13px;background:var(--point-soft);color:var(--point);display:grid;place-items:center;font-weight:900}
 .swatches{display:flex;gap:6px;margin-top:12px}.swatches span{width:18px;height:18px;border-radius:50%}
 .tryBand{background:linear-gradient(135deg,#6750C7,#4B36A8);color:#fff;border-radius:30px;padding:44px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
 .tryBand h2{font-size:clamp(26px,3.4vw,38px)}
@@ -439,6 +439,30 @@ def webp_size(path: Path) -> tuple[int, int]:
         return (bits & 0x3FFF) + 1, ((bits >> 14) & 0x3FFF) + 1
     w, h = struct.unpack("<HH", data[26:30])
     return w & 0x3FFF, h & 0x3FFF
+
+# CashTory colours: the app icon's navy ink for buttons and dark bands, its teal ± as the point colour.
+# Purple stays only inside the app screenshots (the app's default theme).
+NAVY, TEAL, TEAL_TEXT = "#1B1140", "#22B39B", "#0E8C78"
+PALETTE = [
+    ("--accent:#6750C7;--accent-soft:#ECE9F7;--point:#6750C7;--point-soft:#ECE9F7",
+     f"--accent:{NAVY};--accent-soft:#ECEAF3;--point:{TEAL_TEXT};--point-soft:#E3F4F0"),
+    ("rgba(103,80,199,.22)", "rgba(27,17,64,.22)"),
+    ("#DDD7FF 0,#EFEAFF 48%,rgba(239,234,255,0) 72%", "#D3EFE8 0,#EAF6F3 48%,rgba(234,246,243,0) 72%"),
+    ("linear-gradient(180deg,#F0EDFB,#F7F6FC)", "linear-gradient(180deg,#EEF4F3,#F6F8F8)"),
+    ("color:#5547a1;", "color:#0B6E5F;"),
+    ("background:#1C1640;", f"background:{NAVY};"),
+    (".reviewSec .kicker{color:#BDB3FF}", ".reviewSec .kicker{color:#5FD4BF}"),
+    ("background:rgba(189,179,255,.18);color:#BDB3FF", "background:rgba(95,212,191,.16);color:#5FD4BF"),
+    ("#C9C7D8", "#C8C9D3"), ("#E4E1F5", "#E6E7EE"), ("#DEDBF4", "#DFE0E8"),
+    ("border-left:3px solid #8B7CE0", f"border-left:3px solid {TEAL}"),
+    ("linear-gradient(135deg,#6750C7,#4B36A8)", f"linear-gradient(135deg,{NAVY},#2A1F5C)"),
+    ("color:#E2DCFF;", "color:#D6D3E4;"),
+    (".tryBand .pill{background:#fff;color:var(--accent);", f".tryBand .pill{{background:{TEAL};color:#0B1F1B;"),
+]
+PAGE_CSS = CSS
+for a, b in PALETTE:
+    assert a in PAGE_CSS, a
+    PAGE_CSS = PAGE_CSS.replace(a, b)
 
 
 def page(lang: str) -> str:
@@ -514,7 +538,7 @@ def page(lang: str) -> str:
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#6750C7" />
+  <meta name="theme-color" content="{NAVY}" />
   <meta name="description" content="{e(c['desc'])}" />
   <link rel="canonical" href="{url}" />
 {alternates}
@@ -531,7 +555,7 @@ def page(lang: str) -> str:
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <title>{e(c['title'])}</title>
-  <style>{CSS}  </style>
+  <style>{PAGE_CSS}  </style>
 </head>
 <body>
   <header class="top">

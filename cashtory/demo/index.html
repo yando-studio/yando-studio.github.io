@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#6750C7" />
+  <meta name="theme-color" content="#1B1140" />
   <meta name="description" content="CashTory를 설치하지 않고 브라우저에서 바로 사용해 보세요. 1년치 예시 기록이 들어 있는 실제 앱 화면입니다." />
   <link rel="canonical" href="https://yandostudio.co.kr/cashtory/demo/" />
   <link rel="icon" href="/cashtory/assets/favicon-48.png" type="image/png" />
@@ -21,7 +21,7 @@
   <title>CashTory 체험판</title>
   <style>
     :root{
-      --accent:#6750C7;--accent-soft:#ECE9F7;--bg:#F6F7FB;--text:#1C1D22;--sub:#747783;--line:#E4E5EC;
+      --accent:#1B1140;--accent-soft:#E3F4F0;--point:#0E8C78;--bg:#F6F7FB;--text:#1C1D22;--sub:#747783;--line:#E4E5EC;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -32,17 +32,17 @@
     button{font:inherit;cursor:pointer}
 
     .layout{min-height:100%;display:grid;grid-template-columns:minmax(0,420px) auto;gap:64px;align-items:center;justify-content:center;padding:40px 24px}
-    .back{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--accent)}
+    .back{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--point)}
     .brand{display:flex;align-items:center;gap:12px;margin:28px 0 0;font-size:22px;font-weight:850;letter-spacing:-.03em}
     .brand img{width:44px;height:44px;border-radius:12px;box-shadow:0 4px 12px rgba(28,17,71,.16)}
     h1{margin:18px 0 0;font-size:clamp(32px,4vw,44px);line-height:1.15;letter-spacing:-.045em}
     .lead{margin:16px 0 0;color:var(--sub);font-size:17px}
     .tips{margin:24px 0 0;padding:0;list-style:none;display:grid;gap:10px}
     .tips li{display:flex;gap:10px;font-size:15px}
-    .tips li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--accent)}
-    .note{margin:22px 0 0;padding:14px 16px;border-radius:14px;background:var(--accent-soft);color:#4f409e;font-size:14px}
+    .tips li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--point)}
+    .note{margin:22px 0 0;padding:14px 16px;border-radius:14px;background:var(--accent-soft);color:#0B6E5F;font-size:14px}
     .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-    .pill{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;border:0;background:var(--accent);color:#fff;font-weight:800;box-shadow:0 8px 18px rgba(103,80,199,.22)}
+    .pill{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;border:0;background:var(--accent);color:#fff;font-weight:800;box-shadow:0 8px 18px rgba(27,17,64,.22)}
     .pill.ghost{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:none}
 
     .phone{position:relative;width:390px;height:min(844px,calc(100vh - 80px));min-height:640px;border-radius:52px;background:#17181F;padding:12px;box-shadow:0 36px 90px rgba(31,25,62,.23)}
@@ -57,11 +57,11 @@
       html,body{overflow:hidden}
       .layout{display:block;height:100%;min-height:0;padding:0}
       .intro{display:none}
-      .bar{display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;padding-top:env(safe-area-inset-top);box-sizing:content-box;background:#1C1640;color:#fff;font-size:13px}
+      .bar{display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;padding-top:env(safe-area-inset-top);box-sizing:content-box;background:#1B1140;color:#fff;font-size:13px}
       .bar b{font-weight:800}
-      .bar span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#C9C7D8}
+      .bar span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#C8C9D3}
       .bar a,.bar button{flex:none;height:32px;padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:12px;font-weight:700;display:inline-flex;align-items:center}
-      .bar a.play{background:var(--accent);border-color:var(--accent)}
+      .bar a.play{background:#22B39B;border-color:#22B39B;color:#0B1F1B}
       .phone{width:100%;height:calc(100% - 48px - env(safe-area-inset-top));min-height:0;border-radius:0;padding:0;background:none;box-shadow:none}
       .phone iframe,.loading{border-radius:0}
       .loading{inset:0}
