@@ -27,6 +27,7 @@
     html,body{height:100%}
     body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo","Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
     :root:lang(ko) body{word-break:keep-all}
+    :root:lang(ja) h1{word-break:keep-all}
     a{color:inherit;text-decoration:none}
     button{font:inherit;cursor:pointer}
 
@@ -83,7 +84,7 @@
       <p class="lead" data-i18n="lead">1년치 예시 기록이 들어 있는 CashTory를 브라우저에서 직접 눌러 보세요.</p>
       <ul class="tips">
         <li data-i18n="tip1">가운데 + 버튼으로 지출을 직접 입력해 보세요</li>
-        <li data-i18n="tip2">통계 탭에서 이번 달 흐름과 6개월 추이를 확인하세요</li>
+        <li data-i18n="tip2">통계 탭에서 이번 달 흐름과 차량 유지비·연비를 확인하세요</li>
         <li data-i18n="tip3">가계부 위 배너에서 지난달 월말 리뷰를 열어 보세요</li>
         <li data-i18n="tip4">자산 탭에서 카드 결제 예정과 할부를 살펴보세요</li>
       </ul>
@@ -95,14 +96,15 @@
     </section>
 
     <div class="phone">
-      <iframe id="app" src="app/" title="CashTory" allow="clipboard-write"></iframe>
+      <iframe id="app" title="CashTory" allow="clipboard-write"></iframe>
       <div class="loading" id="loading" data-i18n="loading">앱을 불러오는 중…</div>
     </div>
   </main>
 
   <script>
     (function () {
-      // The app inside follows the browser language, so the frame text does too.
+      // Pages link here with ?lang=ko|ja|en; without it, follow the browser language.
+      // The app inside reads the same ?lang (web-demo/stubs/localization.js in the app repo).
       var messages = {
         en: {
           barBack: "←", barTitle: "Demo", barNote: "Nothing you enter is saved", reset: "Restart",
@@ -110,7 +112,7 @@
           title: "No install.<br>The real app.",
           lead: "Try CashTory right in your browser, filled with a year of sample records.",
           tip1: "Tap the center + button to add an expense",
-          tip2: "Open Stats to see this month and the 6-month trend",
+          tip2: "Open Stats to see this month and your car's costs and fuel economy",
           tip3: "Open last month's review from the banner on the ledger",
           tip4: "Check upcoming card payments and installments in Assets",
           note: "Nothing you enter here is saved; reloading starts over. Receipt scanning, home screen widgets and backups are available in the app.",
@@ -119,17 +121,18 @@
         ja: {
           barBack: "←", barTitle: "体験版", barNote: "入力した内容は保存されません", reset: "最初から",
           back: "← CashTory について",
-          title: "インストールなしで、<br>実際のアプリそのまま。",
+          title: "インストール<wbr>なしで、<br>実際のアプリ<wbr>そのまま。",
           lead: "1年分のサンプル記録が入った CashTory を、ブラウザでそのまま操作してみてください。",
           tip1: "中央の + ボタンで支出を入力してみましょう",
-          tip2: "統計タブで今月の流れと6か月の推移を確認できます",
+          tip2: "統計タブで今月の流れと車の維持費・燃費を確認できます",
           tip3: "家計簿の上のバナーから先月の月末レビューを開けます",
           tip4: "資産タブでカードの支払予定と分割払いを見てみましょう",
           note: "体験版で入力した内容は保存されず、再読み込みすると最初に戻ります。レシート撮影・ホーム画面ウィジェット・バックアップはアプリで利用できます。",
           play: "Google Play で入手", resetLong: "最初からやり直す", loading: "アプリを読み込み中…"
         }
       };
-      var lang = (navigator.language || "ko").slice(0, 2);
+      var asked = new URLSearchParams(location.search).get("lang");
+      var lang = asked === "ko" || messages[asked] ? asked : (navigator.language || "ko").slice(0, 2);
       var dict = messages[lang];
       if (dict) {
         document.documentElement.lang = lang;
@@ -144,6 +147,8 @@
       }
 
       var frame = document.getElementById("app");
+      var appSrc = asked === lang ? "app/?lang=" + lang : "app/";
+      frame.src = appSrc;
       var loading = document.getElementById("loading");
       frame.addEventListener("load", function () {
         // The app needs a moment after load to open its database and fill sample data.
@@ -152,7 +157,7 @@
       document.querySelectorAll(".reset").forEach(function (b) {
         b.addEventListener("click", function () {
           loading.classList.remove("done");
-          frame.src = "app/?t=" + Date.now();
+          frame.src = appSrc + (appSrc.indexOf("?") < 0 ? "?" : "&") + "t=" + Date.now();
         });
       });
     })();

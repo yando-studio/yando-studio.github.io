@@ -26,12 +26,12 @@ OG_LOCALE = {"ko": "ko_KR", "ja": "ja_JP", "en": "en_US"}
 COPY = {
     "ko": {
         "title": "CashTory — 기록은 가볍게, 돈의 흐름은 한눈에",
-        "desc": "영수증 입력부터 카드·할부, 자산·부채, 월말 리뷰와 메모·디데이까지. 회원가입 없이 시작하는 생활 가계부.",
-        "nav": [("#features", "기능"), ("#review", "월말 리뷰"), ("/cashtory/demo/", "체험하기"),
+        "desc": "영수증 입력부터 카드·할부, 자산·부채, 차계부, 월말 리뷰와 메모·디데이까지. 회원가입 없이 시작하는 생활 가계부.",
+        "nav": [("#features", "기능"), ("#vehicle", "차계부"), ("#review", "월말 리뷰"), ("/cashtory/demo/", "체험하기"),
                 ("/cashtory/guide/", "사용법"), ("/cashtory/faq/", "FAQ")],
         "play": "Google Play",
         "hero_h1": "기록은 가볍게,<br>돈의 흐름은 한눈에.",
-        "hero_lead": "영수증 입력부터 카드·할부, 자산과 월말 리뷰까지. 복잡한 금융 용어 대신 내가 쓰는 돈의 흐름을 편하게 기록해 보세요.",
+        "hero_lead": "영수증 입력부터 카드·할부, 자산과 차계부, 월말 리뷰까지. 복잡한 금융 용어 대신 내가 쓰는 돈의 흐름을 편하게 기록해 보세요.",
         "hero_play": "Google Play에서 시작하기",
         "hero_demo": "설치 없이 체험하기",
         "hero_micro": "회원가입 없이 바로 시작 · 6개 언어 · 13개 통화",
@@ -59,7 +59,7 @@ COPY = {
         "cards_k": "CARD & INSTALLMENT",
         "cards_h": "카드로 쓴 돈도,<br>앞으로 낼 돈도 함께.",
         "cards_lead": "카드 사용은 구매한 날 지출로, 카드값 납부는 부채를 갚는 이동으로 처리해 같은 소비가 두 번 잡히지 않습니다.",
-        "cards_list": [("카드 결제 예정", "결제일에 나갈 금액과 미결제 확인"),
+        "cards_list": [("카드 결제 예정", "결제일·출금 통장·D-day를 한 줄에"),
                        ("자동결제", "결제계좌와 결제일로 알아서 처리"),
                        ("할부 관리", "원리금균등·원금균등·단리 이자 계산"),
                        ("선결제", "미리 갚은 회차까지 정리")],
@@ -68,6 +68,14 @@ COPY = {
         "stats_h": "이번 달 흐름을<br>사진 한 장과 한마디로.",
         "stats_lead": "통계 첫 카드가 이번 달 지출을 지난달·6개월 평균과 비교해 한마디로 알려줘요. 고정비·변동비, 6개월 추이, 분류별 비중과 전월 대비 증감까지 이어서 보여줍니다.",
         "alt_stats": "통계 요약 화면", "alt_category": "분류별 지출 화면",
+        "vehicle_k": "VEHICLE LOG",
+        "vehicle_h": "차에 드는 돈도,<br>가계부 안에서.",
+        "vehicle_lead": "차를 등록해 두면 주유·정비 지출을 적을 때 주행거리·주유량·교체 항목이 함께 기록돼요. 연비와 유지비, 다음 정비 시기는 통계의 '차량' 탭에서 한눈에 볼 수 있어요.",
+        "vehicle": [("⛽", "주유도 지출 한 번에", "주유비를 적으면서 주행거리와 주유량을 함께 남기세요. 연비와 km당 비용은 알아서 계산돼요."),
+                    ("⚙", "정비 교체 시기", "엔진오일·필터·타이어를 거리나 기간으로 챙기고, 지났거나 곧 다가오는 항목을 알려줘요."),
+                    ("⚡", "전기차도, 두 대도", "휘발유·경유·LPG·하이브리드·전기차 모두. 차는 무료로 2대까지 등록할 수 있어요."),
+                    ("◔", "차량 통계", "이번 달 유지비, 최근 6개월 유지비와 연비 그래프, 정비 항목을 한 화면에.")],
+        "alt_vehicle": "통계의 차량 탭 화면", "alt_vehicle2": "차량 유지비 추이와 상세 기록",
         "review_k": "MONTHLY REVIEW",
         "review_h": "한 달의 숫자에<br>이야기를 더했어요.",
         "review_lead": "수입·지출과 저축률, 지난달과 달라진 점, 고정비·변동비, 카드·할부, 자산 변화와 다음 달 예정까지 한 화면에서 돌아보세요.",
@@ -78,8 +86,8 @@ COPY = {
         "alt_review": "월말 마감 리뷰 화면",
         "assets_k": "ASSETS",
         "assets_h": "가계부 기록이<br>자산의 흐름으로.",
-        "assets_lead": "통장·현금·카드·투자·대출을 한곳에서 보고 순자산을 확인하세요. 앞으로 30일 동안 나갈 카드값과 정기 지출도 미리 보여줍니다.",
-        "alt_assets": "자산 탭 화면",
+        "assets_lead": "통장·현금·카드·투자·대출을 한 줄씩 보고, 맨 위 세 칸에서 자산·부채·순자산을 바로 확인하세요. 앞으로 30일 동안 나갈 카드값·정기 지출·정기 이체는 가계부의 '곧 나갈 돈'에서 날짜별로 미리 보여줍니다.",
+        "alt_assets": "자산 탭 화면", "alt_upcoming": "곧 나갈 돈 화면",
         "dday_k": "MEMO & D-DAY",
         "dday_h": "돈 드는 날은<br>미리 알고 있게.",
         "dday_lead": "결혼기념일·생일·여행처럼 돈이 드는 날을 디데이로 챙기고, 그날의 메모를 남기세요. 매년·매월 반복도 되고, 가계부 날짜 사이에 함께 보여요.",
@@ -113,11 +121,11 @@ COPY = {
     },
     "ja": {
         "title": "CashTory — 記録は軽く、お金の流れはひと目で",
-        "desc": "レシート入力からカード・分割払い、資産・負債、月末レビュー、メモ・Dデーまで。会員登録なしで始められる家計簿アプリ。",
-        "nav": [("#features", "機能"), ("#review", "月末レビュー"), ("/cashtory/demo/", "体験版")],
+        "desc": "レシート入力からカード・分割払い、資産・負債、車の家計簿、月末レビュー、メモ・Dデーまで。会員登録なしで始められる家計簿アプリ。",
+        "nav": [("#features", "機能"), ("#vehicle", "車の家計簿"), ("#review", "月末レビュー"), ("/cashtory/demo/", "体験版")],
         "play": "Google Play",
         "hero_h1": "記録は軽く、<br>お金の流れは<wbr>ひと目で。",
-        "hero_lead": "レシート入力からカード・分割払い、資産、月末レビューまで。難しい金融用語ではなく、自分のお金の流れを気軽に記録できます。",
+        "hero_lead": "レシート入力からカード・分割払い、資産と車の家計簿、月末レビューまで。難しい金融用語ではなく、自分のお金の流れを気軽に記録できます。",
         "hero_play": "Google Play で始める",
         "hero_demo": "インストールなしで試す",
         "hero_micro": "会員登録なしですぐ開始 · 6言語 · 13通貨",
@@ -140,7 +148,7 @@ COPY = {
         "cards_k": "CARD & INSTALLMENT",
         "cards_h": "カードで<wbr>使ったお金も、<br>これから<wbr>払うお金も。",
         "cards_lead": "カード利用は購入日に支出として、カード代金の引き落としは負債の返済として記録するので、同じ支出が二重に数えられません。",
-        "cards_list": [("カードの支払予定", "引き落とし日の金額と未確定分を確認"),
+        "cards_list": [("カードの支払予定", "引き落とし日・口座・Dデーを1行で"),
                        ("自動引き落とし", "引き落とし口座と日付で自動処理"),
                        ("分割払いの管理", "元利均等・元金均等・単利の利息計算"),
                        ("繰上返済", "前払いした回までまとめて整理")],
@@ -149,6 +157,14 @@ COPY = {
         "stats_h": "今月の流れを、<br>写真と<wbr>ひとことで。",
         "stats_lead": "統計の最初のカードが、今月の支出を先月・6か月平均と比べてひとことで伝えます。固定費・変動費、6か月の推移、分類ごとの割合と前月比まで続けて確認できます。",
         "alt_stats": "統計のまとめ画面", "alt_category": "分類別の支出画面",
+        "vehicle_k": "VEHICLE LOG",
+        "vehicle_h": "車にかかる<wbr>お金も、<br>家計簿の中で。",
+        "vehicle_lead": "車を登録しておくと、給油・整備の支出を入力するときに走行距離・給油量・交換した項目も一緒に記録されます。燃費や維持費、次の整備時期は統計の「車両」タブでひと目で確認できます。",
+        "vehicle": [("⛽", "給油も1回の入力で", "給油代を入力しながら走行距離と給油量も残せます。燃費と1kmあたりの費用は自動で計算されます。"),
+                    ("⚙", "整備の交換時期", "エンジンオイル・フィルター・タイヤを距離や期間で管理し、過ぎた項目や近づく項目をお知らせします。"),
+                    ("⚡", "EVも、2台目も", "ガソリン・軽油・LPG・ハイブリッド・EVに対応。車は無料で2台まで登録できます。"),
+                    ("◔", "車両の統計", "今月の維持費、直近6か月の維持費と燃費のグラフ、整備項目を1画面で。")],
+        "alt_vehicle": "統計の車両タブの画面", "alt_vehicle2": "車の維持費の推移と詳細記録",
         "review_k": "MONTHLY REVIEW",
         "review_h": "ひと月の数字に、<br>ストーリーを。",
         "review_lead": "収入・支出と貯蓄率、先月からの変化、固定費・変動費、カード・分割払い、資産の変化と来月の予定まで1画面で振り返れます。",
@@ -159,8 +175,8 @@ COPY = {
         "alt_review": "月末まとめレビュー画面",
         "assets_k": "ASSETS",
         "assets_h": "家計簿の記録が、<br>資産の流れへ。",
-        "assets_lead": "口座・現金・カード・投資・ローンをまとめて見て、純資産を確認できます。今後30日のカード代金と定期支出も前もって表示します。",
-        "alt_assets": "資産タブの画面",
+        "assets_lead": "口座・現金・カード・投資・ローンを1行ずつ確認し、いちばん上の3つの欄で資産・負債・純資産をすぐに把握できます。今後30日のカード代金・定期支出・定期振替は、家計簿の「今後の支払い」で日付ごとに前もって表示します。",
+        "alt_assets": "資産タブの画面", "alt_upcoming": "今後の支払いの画面",
         "dday_k": "MEMO & D-DAY",
         "dday_h": "お金が<wbr>かかる日は、<br>前もって<wbr>わかるように。",
         "dday_lead": "結婚記念日・誕生日・旅行など、お金がかかる日を D デーで管理し、その日のメモも残せます。毎年・毎月の繰り返しにも対応し、家計簿の日付の間にも表示されます。",
@@ -195,11 +211,11 @@ COPY = {
     },
     "en": {
         "title": "CashTory — Log lightly, see your money flow at a glance",
-        "desc": "From receipt scanning to cards and installments, assets, a monthly review and memos & D-days. A budget app you can start without signing up.",
-        "nav": [("#features", "Features"), ("#review", "Monthly review"), ("/cashtory/demo/", "Try it")],
+        "desc": "From receipt scanning to cards and installments, assets, a vehicle log, a monthly review and memos & D-days. A budget app you can start without signing up.",
+        "nav": [("#features", "Features"), ("#vehicle", "Vehicle log"), ("#review", "Monthly review"), ("/cashtory/demo/", "Try it")],
         "play": "Google Play",
         "hero_h1": "Log lightly.<br>See your money at a glance.",
-        "hero_lead": "From receipts to cards and installments, assets and a monthly review. No finance jargon — just an easy way to keep track of where your money goes.",
+        "hero_lead": "From receipts to cards and installments, assets, your car and a monthly review. No finance jargon — just an easy way to keep track of where your money goes.",
         "hero_play": "Get it on Google Play",
         "hero_demo": "Try it without installing",
         "hero_micro": "No sign-up · 6 languages · 13 currencies",
@@ -222,7 +238,7 @@ COPY = {
         "cards_k": "CARD & INSTALLMENT",
         "cards_h": "Money you spent by card,<br>and money still to pay.",
         "cards_lead": "Card purchases count as spending on the day you buy; paying the card bill is a transfer that pays down the debt — so nothing gets counted twice.",
-        "cards_list": [("Upcoming card bills", "What's due and what's still pending"),
+        "cards_list": [("Upcoming card bills", "Due date, paying account and D-day in one row"),
                        ("Auto-pay", "Handled by payment account and due date"),
                        ("Installments", "Equal payment, equal principal or flat interest"),
                        ("Pay off early", "Settle future installments in one go")],
@@ -231,6 +247,14 @@ COPY = {
         "stats_h": "This month's flow,<br>in one photo and one line.",
         "stats_lead": "The first card in Stats compares this month's spending with last month and your 6-month average, and sums it up in one line. Then fixed vs. variable costs, the 6-month trend, and each category's share and change.",
         "alt_stats": "Stats summary screen", "alt_category": "Spending by category",
+        "vehicle_k": "VEHICLE LOG",
+        "vehicle_h": "What your car costs,<br>right in your ledger.",
+        "vehicle_lead": "Add your car, and fuel and service expenses also log mileage, fuel and replaced parts. Fuel economy, running costs and the next service are all on the Vehicle tab in Stats.",
+        "vehicle": [("⛽", "Fuel-ups in one entry", "Log the odometer and fuel as you record the expense. Fuel economy and cost per mile are worked out for you."),
+                    ("⚙", "Service reminders", "Track oil, filters and tires by distance or time, and see what's overdue or coming up."),
+                    ("⚡", "EVs and a second car", "Gas, diesel, LPG, hybrid or electric; miles and gallons or km and liters. Add up to 2 cars for free."),
+                    ("◔", "Vehicle stats", "This month's running costs, 6-month cost and fuel economy charts, and maintenance items on one screen.")],
+        "alt_vehicle": "Vehicle tab in Stats", "alt_vehicle2": "Vehicle running costs and details",
         "review_k": "MONTHLY REVIEW",
         "review_h": "A story behind<br>each month's numbers.",
         "review_lead": "Income, spending and savings rate, what changed since last month, fixed and variable costs, cards and installments, how your assets moved and what's coming next month — all on one screen.",
@@ -241,8 +265,8 @@ COPY = {
         "alt_review": "Monthly review screen",
         "assets_k": "ASSETS",
         "assets_h": "From daily records<br>to the bigger picture.",
-        "assets_lead": "See bank accounts, cash, cards, investments and loans in one place with your net worth. Card bills and recurring payments for the next 30 days show up ahead of time.",
-        "alt_assets": "Assets tab",
+        "assets_lead": "See bank accounts, cash, cards, investments and loans one row each, with assets, debt and net worth in three boxes at the top. Card bills, recurring payments and transfers for the next 30 days are listed by date under Coming up in your ledger.",
+        "alt_assets": "Assets tab", "alt_upcoming": "Coming up screen",
         "dday_k": "MEMO & D-DAY",
         "dday_h": "Know the costly days<br>before they arrive.",
         "dday_lead": "Track anniversaries, birthdays and trips as D-days, and leave a memo for any day. They can repeat yearly or monthly, and show up between the dates in your ledger.",
@@ -431,7 +455,9 @@ def page(lang: str) -> str:
     alternates = "\n".join(
         f'  <link rel="alternate" hreflang="{l}" href="{SITE}{PATHS[l]}" />' for l in LANGS
     ) + f'\n  <link rel="alternate" hreflang="x-default" href="{SITE}{PATHS["ko"]}" />'
-    nav = "".join(f'<a href="{h}">{e(t)}</a>' for h, t in c["nav"])
+    # The demo follows the browser language unless told otherwise, so pass this page's language along.
+    demo = f"/cashtory/demo/?lang={lang}"
+    nav = "".join(f'<a href="{demo if h == "/cashtory/demo/" else h}">{e(t)}</a>' for h, t in c["nav"])
     langs = "".join(
         f'<a href="{PATHS[l]}" hreflang="{l}" lang="{l}"' + (' aria-current="page"' if l == lang else "")
         + f'>{l.upper()}</a>' for l in LANGS
@@ -455,6 +481,10 @@ def page(lang: str) -> str:
     cards_list = "".join(
         f'<div class="listItem"><span class="check">✓</span><div><b>{e(b)}</b><small>{e(s)}</small></div></div>'
         for b, s in c["cards_list"]
+    )
+    vehicle = "".join(
+        f'<article class="feature"><div class="featureIcon" aria-hidden="true">{i}</div><h3>{e(t)}</h3><p>{e(p)}</p></article>'
+        for i, t, p in c["vehicle"]
     )
     review_list = "".join(
         f'<div class="listItem"><span class="check">✓</span><span>{e(t)}</span></div>' for t in c["review_list"]
@@ -524,7 +554,7 @@ def page(lang: str) -> str:
           <p class="lead">{e(c['hero_lead'])}</p>
           <div class="cta">
             <a class="pill" href="{PLAY}">{e(c['hero_play'])}</a>
-            <a class="pill ghost" href="/cashtory/demo/">{e(c['hero_demo'])}</a>
+            <a class="pill ghost" href="{demo}">{e(c['hero_demo'])}</a>
           </div>
           <div class="micro">{e(c['hero_micro'])}</div>
         </div>
@@ -584,6 +614,21 @@ def page(lang: str) -> str:
       </div>
     </section>
 
+    <section class="block white" id="vehicle">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">{c['vehicle_k']}</p>
+          <h2>{c['vehicle_h']}</h2>
+          <p class="sectionLead">{e(c['vehicle_lead'])}</p>
+        </div>
+        <div class="inputMedia">
+          <div class="phone">{img('vehicle', c['alt_vehicle'])}</div>
+          <div class="phone">{img('vehicle2', c['alt_vehicle2'])}</div>
+        </div>
+        <div class="features">{vehicle}</div>
+      </div>
+    </section>
+
     <section class="reviewSec" id="review">
       <div class="wrap split">
         <div>
@@ -606,7 +651,12 @@ def page(lang: str) -> str:
           <h2>{c['assets_h']}</h2>
           <p class="sectionLead">{e(c['assets_lead'])}</p>
         </div>
-        <div class="media"><figure class="shot">{img('assets', c['alt_assets'])}</figure></div>
+        <div class="media">
+          <div class="shots">
+            <figure class="shot">{img('assets', c['alt_assets'])}</figure>
+            <figure class="shot">{img('upcoming', c['alt_upcoming'])}</figure>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -659,7 +709,7 @@ def page(lang: str) -> str:
           <h2>{c['try_h']}</h2>
           <p>{e(c['try_p'])}</p>
         </div>
-        <a class="pill" href="/cashtory/demo/">{e(c['try_btn'])}</a>
+        <a class="pill" href="{demo}">{e(c['try_btn'])}</a>
       </div>
     </section>
 
