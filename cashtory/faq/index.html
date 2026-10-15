@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#6750C7">
-<meta name="description" content="CashTory 사용 중 자주 묻는 질문: 회원가입, 데이터 저장, 카드·할부, 영수증, 백업.">
+<meta name="description" content="CashTory 사용 중 자주 묻는 질문: 회원가입, 데이터 저장, 카드·할부, 차계부, 영수증, 백업.">
 <link rel="canonical" href="https://yandostudio.co.kr/cashtory/faq/">
 <link rel="icon" href="/cashtory/assets/favicon-48.png" type="image/png">
 <link rel="apple-touch-icon" href="/cashtory/assets/apple-touch-icon.png">
@@ -11,7 +11,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:url" content="https://yandostudio.co.kr/cashtory/faq/">
 <meta property="og:title" content="CashTory FAQ">
-<meta property="og:description" content="CashTory 사용 중 자주 묻는 질문: 회원가입, 데이터 저장, 카드·할부, 영수증, 백업.">
+<meta property="og:description" content="CashTory 사용 중 자주 묻는 질문: 회원가입, 데이터 저장, 카드·할부, 차계부, 영수증, 백업.">
 <meta property="og:image" content="https://yandostudio.co.kr/cashtory/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -38,7 +38,14 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
 <details><summary>지출·수입·이체는 어떻게 다른가요?</summary><p>지출은 돈이 사용된 기록, 수입은 돈이 들어온 기록입니다. 이체는 내 자산 사이의 이동이므로 일반적으로 지출이나 수입 통계에 중복 포함하지 않습니다.</p></details>
 <details><summary>신용카드 사용액은 언제 지출로 계산되나요?</summary><p>카드로 실제 구매한 날짜에 지출로 기록됩니다. 카드 대금이 통장에서 빠져나가는 날에는 다시 지출로 계산하지 않습니다.</p></details>
 <details><summary>카드값을 냈는데 왜 지출이 하나 더 생기지 않나요?</summary><p>카드 사용 시점에 이미 지출이 기록되었기 때문입니다. 카드 대금 결제는 통장에서 카드 부채를 갚는 이동으로 처리합니다.</p></details>
+<details><summary>곧 나갈 돈은 어디서 보나요?</summary><p>1.6.0부터 가계부 화면으로 옮겼습니다. 가계부 요약 카드의 <b>곧 나갈 돈 (이번 달)</b>이나 오른쪽 위 시계 아이콘을 누르면 앞으로 30일 동안 나갈 카드 결제·정기지출·정기 이체를 날짜별로 볼 수 있습니다. 카드 결제는 이미 지출로 적은 돈을 갚는 것이라 지출 합계에 다시 더하지 않습니다.</p></details>
 <details><summary>사용하지 않는 자산은 삭제해야 하나요?</summary><p>기록을 유지하고 싶다면 삭제 대신 숨기기를 권장합니다. 숨겨도 기존 거래 기록은 유지됩니다.</p></details>
+</div></section>
+
+<section class="group"><h2>차계부</h2><div class="faq">
+<details><summary>주유비를 입력하는데 차량 칸이 안 나와요.</summary><p>차량 칸은 <b>차량 지출로 쓰기</b>를 켠 지출 분류에서만 나옵니다. 처음 차를 등록하면 기본 분류 중 주유와 차량관리가 켜집니다. 보험료·자동차세·주차비도 유지비에 넣고 싶다면 더보기 › 분류 관리에서 그 분류를 고친 뒤 차량 지출로 쓰기를 켜 주세요. 종류는 주유(주유량), 정비(교체 항목), 기타(차량과 주행거리만) 중에서 고를 수 있습니다.</p></details>
+<details><summary>연비는 어떻게 계산하나요?</summary><p>가득 넣은 날끼리 계산합니다. 앞서 가득 넣은 날부터 이번에 가득 넣은 날까지 달린 거리를 그 사이에 넣은 양(이번 주유 포함)의 합으로 나눕니다. 중간에 조금만 넣은 날은 주유량 옆 가득 표시를 끄고 저장해 주세요. 주행거리나 주유량이 빠진 구간은 연비에서 뺍니다.</p></details>
+<details><summary>차는 몇 대까지 등록할 수 있나요?</summary><p>무료로 2대까지 등록할 수 있습니다. 판 차는 보관하면 지난 기록은 남고 등록 대수에서는 빠집니다.</p></details>
 </div></section>
 
 <section class="group"><h2>할부 · 자동기록</h2><div class="faq">
