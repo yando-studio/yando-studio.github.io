@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#2F7F6E" />
-  <meta name="description" content="Track what you have and when it expires. Add items from receipts, order screenshots or barcodes, then plan shopping lists and this week&#x27;s meals." />
+  <meta name="theme-color" content="#0B3B32" />
+  <meta name="description" content="Track what you have and when it expires. Add items from receipts, order screenshots or barcodes, then plan shopping lists, this week&#x27;s meals and home screen widgets." />
   <link rel="canonical" href="https://yandostudio.co.kr/shelftory/en/" />
   <link rel="alternate" hreflang="ko" href="https://yandostudio.co.kr/shelftory/" />
   <link rel="alternate" hreflang="en" href="https://yandostudio.co.kr/shelftory/en/" />
@@ -17,14 +17,14 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://yandostudio.co.kr/shelftory/en/" />
   <meta property="og:title" content="ShelfTory — See what&#x27;s left, shop for what you need" />
-  <meta property="og:description" content="Track what you have and when it expires. Add items from receipts, order screenshots or barcodes, then plan shopping lists and this week&#x27;s meals." />
+  <meta property="og:description" content="Track what you have and when it expires. Add items from receipts, order screenshots or barcodes, then plan shopping lists, this week&#x27;s meals and home screen widgets." />
   <meta property="og:image" content="https://yandostudio.co.kr/shelftory/assets/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <title>ShelfTory — See what&#x27;s left, shop for what you need</title>
   <style>
-:root{--accent:#2F7F6E;--accent-soft:#E2EFEA;--point:#2F7F6E;--point-soft:#E2EFEA;--bg:#F7F7F3;--card:#fff;--text:#1C1D22;--sub:#747783;--line:#E4E6DF;--shadow:0 18px 55px rgba(20,48,40,.09);--max:1120px}
+:root{--accent:#0B3B32;--accent-soft:#E7EFEB;--point:#307E6F;--point-soft:#E7F2EE;--bg:#F7F4EE;--card:#fff;--text:#1C1D22;--sub:#747783;--line:#E7E1D5;--shadow:0 18px 55px rgba(43,38,25,.08);--max:1120px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo","Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
@@ -33,17 +33,17 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-s
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%;height:auto}
 .wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
-.top{position:sticky;top:0;z-index:20;background:rgba(247,247,243,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(228,230,223,.8)}
+.top{position:sticky;top:0;z-index:20;background:rgba(247,244,238,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(231,225,213,.8)}
 .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.03em}
-.brand img{width:36px;height:36px;border-radius:11px;box-shadow:0 4px 12px rgba(14,59,49,.16)}
+.brand img{width:36px;height:36px;border-radius:11px;box-shadow:0 4px 12px rgba(11,59,50,.16)}
 .navRight{display:flex;align-items:center;gap:20px}
 .navlinks{display:flex;align-items:center;gap:20px;font-size:14px;color:#565965;font-weight:650}
 .navlinks a:hover{color:var(--point)}
 .lang{display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:12px;font-weight:800}
 .lang a{padding:4px 9px;border-radius:999px;color:var(--sub)}
 .lang a[aria-current]{background:var(--accent);color:#fff}
-.pill{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:800;box-shadow:0 8px 18px rgba(47,127,110,.22)}
+.pill{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:800;box-shadow:0 8px 18px rgba(11,59,50,.22)}
 .pill.ghost{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:none}
 .pill.small{min-height:40px;padding:0 16px;font-size:14px}
 .hero{padding:72px 0 64px;overflow:hidden}
@@ -56,8 +56,8 @@ h2{margin:0;font-size:clamp(30px,4.2vw,48px);line-height:1.15;letter-spacing:-.0
 .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
 .micro{margin-top:16px;font-size:13px;color:#8A8C97}
 .stage{position:relative;display:grid;place-items:center;min-height:620px}
-.halo{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,#CFE6DD 0,#E6F1EC 48%,rgba(230,241,236,0) 72%)}
-.phone{position:relative;width:min(300px,78vw);border-radius:44px;background:#17181F;padding:9px;box-shadow:0 34px 80px rgba(20,48,40,.2)}
+.halo{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,#EBDDC6 0,#F2EADC 48%,rgba(242,234,220,0) 72%)}
+.phone{position:relative;width:min(300px,78vw);border-radius:44px;background:#17181F;padding:9px;box-shadow:0 34px 80px rgba(11,59,50,.2)}
 .phone img{width:100%;border-radius:36px}
 .hero .phone{transform:rotate(2deg)}
 .float{position:absolute;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:11px 15px;font-size:13px;font-weight:750;line-height:1.4}
@@ -68,7 +68,7 @@ h2{margin:0;font-size:clamp(30px,4.2vw,48px);line-height:1.15;letter-spacing:-.0
 .trustItem{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
 .trustItem b{display:block;font-size:15px}.trustItem span{font-size:13px;color:var(--sub)}
 section.block{padding:96px 0}
-.tint{background:linear-gradient(180deg,#EAF3EF,#F6F8F5)}
+.tint{background:linear-gradient(180deg,#F4EFE6,#F8F6F1)}
 .white{background:#fff}
 .head{max-width:720px;margin-bottom:36px}
 .kicker{margin:0 0 10px;color:var(--point);font-size:13px;font-weight:850;letter-spacing:.08em}
@@ -89,7 +89,7 @@ section.block{padding:96px 0}
 .scrollShot img{width:100%;border-radius:23px;animation:shotScroll 12s cubic-bezier(.65,0,.35,1) infinite alternate}
 @keyframes shotScroll{0%,10%{transform:translateY(0)}90%,100%{transform:translateY(calc(-100% + 544px))}}
 .receipt h3{font-size:26px;letter-spacing:-.035em;margin:0 0 10px;line-height:1.3}.receipt p{margin:0;color:var(--sub)}
-.note{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--point-soft);color:#24604F;font-size:13px;font-weight:700}
+.note{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--point-soft);color:#215147;font-size:13px;font-weight:700}
 .list{display:grid;gap:14px;margin-top:26px}
 .listItem{display:flex;gap:12px;align-items:flex-start}
 .check{flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--point-soft);color:var(--point);display:grid;place-items:center;font-size:12px;font-weight:900}
@@ -111,10 +111,10 @@ section.block{padding:96px 0}
 .dataCard{display:flex;gap:14px}
 .dataCard i{flex:none;font-style:normal;width:42px;height:42px;border-radius:13px;background:var(--point-soft);color:var(--point);display:grid;place-items:center;font-weight:900}
 .swatches{display:flex;gap:6px;margin-top:12px}.swatches span{width:18px;height:18px;border-radius:50%}
-.tryBand{background:linear-gradient(135deg,#2F7F6E,#0E3B31);color:#fff;border-radius:30px;padding:44px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.tryBand{background:linear-gradient(135deg,#0B3B32,#1C4A3F);color:#fff;border-radius:30px;padding:44px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
 .tryBand h2{font-size:clamp(26px,3.4vw,38px)}
-.tryBand p{margin:12px 0 0;color:#D5EBE3;max-width:560px}
-.tryBand .pill{background:#fff;color:var(--accent);box-shadow:none}
+.tryBand p{margin:12px 0 0;color:#D3E2DC;max-width:560px}
+.tryBand .pill{background:#E2BF8C;color:#0B3B32;box-shadow:none}
 .centerCta{text-align:center;padding:100px 0 96px}
 .centerCta p{color:var(--sub);margin:16px 0 26px}
 .centerCta .cta{justify-content:center}
@@ -156,7 +156,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
     <div class="wrap nav">
       <a class="brand" href="/shelftory/en/"><img src="/shelftory/assets/app-icon.webp" alt="" width="36" height="36"><span>ShelfTory</span></a>
       <div class="navRight">
-        <nav class="navlinks" aria-label="ShelfTory"><a href="#expiry">Expiry alerts</a><a href="#shopping">Shopping</a><a href="#menu">Meals</a><a href="/shelftory/demo/">Try it</a></nav>
+        <nav class="navlinks" aria-label="ShelfTory"><a href="#expiry">Expiry alerts</a><a href="#shopping">Shopping</a><a href="#menu">Meals</a><a href="#widgets">Widgets</a><a href="/shelftory/demo/?lang=en">Try it</a></nav>
         <nav class="lang" aria-label="Language"><a href="/shelftory/" hreflang="ko" lang="ko">KO</a><a href="/shelftory/en/" hreflang="en" lang="en" aria-current="page">EN</a></nav>
         <a class="pill small" href="https://play.google.com/store/apps/details?id=com.yandostudio.shelftory">Google Play</a>
       </div>
@@ -172,7 +172,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
           <p class="lead">Keep track of quantities and expiry dates, then plan your shopping list and this week&#x27;s meals in the same app — at home or for a small shop.</p>
           <div class="cta">
             <a class="pill" href="https://play.google.com/store/apps/details?id=com.yandostudio.shelftory">Get it on Google Play</a>
-            <a class="pill ghost" href="/shelftory/demo/">Try it without installing</a>
+            <a class="pill ghost" href="/shelftory/demo/?lang=en">Try it without installing</a>
           </div>
           <div class="micro">Free · No sign-up · English · 한국어</div>
         </div>
@@ -186,7 +186,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
     </section>
 
     <section class="trust" aria-label="ShelfTory">
-      <div class="wrap grid4"><div class="trustItem"><b>No sign-up</b><span>Install and start right away.</span></div><div class="trustItem"><b>Stored on your device</b><span>Your data stays on your phone.</span></div><div class="trustItem"><b>Barcodes offline</b><span>Built-in Korean barcode data, no internet needed.</span></div><div class="trustItem"><b>Free backup &amp; Excel</b><span>Your records aren&#x27;t locked inside the app.</span></div></div>
+      <div class="wrap grid4"><div class="trustItem"><b>No sign-up</b><span>Install and start right away.</span></div><div class="trustItem"><b>Stored on your device</b><span>Your data stays on your phone.</span></div><div class="trustItem"><b>4 home screen widgets</b><span>Check expiry and your list without opening the app.</span></div><div class="trustItem"><b>Free backup &amp; Excel</b><span>Your records aren&#x27;t locked inside the app.</span></div></div>
     </section>
 
     <section class="block tint" id="expiry">
@@ -199,28 +199,38 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
         <div class="media"><div class="phone flat"><img src="/shelftory/assets/screens/en/home.webp" alt="Items to check today on the home screen" width="780" height="1688" loading="lazy" decoding="async"></div></div>
       </div>
     </section>
-    <section class="block" id="organize">
+    <section class="block" id="favorites">
       <div class="wrap split rev">
+        <div>
+          <p class="kicker">FAVORITES</p>
+          <h2>Things you check often,<br>right on the home screen.</h2>
+          <p class="sectionLead">Star the items you check all the time — milk, eggs — and the home screen shows how much is left and the nearest expiry date. Even when they run out they stay on the card, so one tap puts them back on your list.</p>
+        </div>
+        <div class="media"><div class="textCard"><div class="list"><div class="listItem"><span class="check">✓</span><div><b>Star it</b><small>From the item screen or Item settings</small></div></div><div class="listItem"><span class="check">✓</span><div><b>What&#x27;s left · D-day</b><small>Mixed units shown as 2 pcs · 500 g</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Ran out? Add to cart</b><small>Shows “Added” when it&#x27;s already there</small></div></div></div></div></div>
+      </div>
+    </section>
+    <section class="block tint" id="organize">
+      <div class="wrap split">
         <div>
           <p class="kicker">ORGANIZE</p>
           <h2>Sorted by category<br>and by where it lives.</h2>
-          <p class="sectionLead">Split things into Fridge, Freezer, Pantry and Supplies, then group them by spot — the fridge door, the crisper. Choose a standard, grid or compact view.</p>
+          <p class="sectionLead">Split things into Fridge, Freezer, Pantry and Supplies, then group them by spot — the fridge door, the crisper. Choose a standard, grid or compact view, and search by name.</p>
         </div>
         <div class="media"><div class="phone flat"><img src="/shelftory/assets/screens/en/list.webp" alt="Items grouped by category and spot" width="780" height="1688" loading="lazy" decoding="async"></div></div>
       </div>
     </section>
-    <section class="block tint" id="input">
-      <div class="wrap split">
+    <section class="block" id="input">
+      <div class="wrap split rev">
         <div>
           <p class="kicker">FAST INPUT</p>
           <h2>Less typing,<br>item by item.</h2>
-          <p class="sectionLead">Read items and quantities from a receipt or a shopping-app order screenshot, check them, and add them all at once. Or look up a product name by barcode, or type it in. Photos are read on your device and never sent to our servers.</p><div class="list"><div class="listItem"><span class="check">✓</span><div><b>Scan a receipt</b><small>Items and quantities, added in one go</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Order screenshot</b><small>Reuse the order screen from a shopping app</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Scan a barcode</b><small>Built-in Korean barcode data works offline</small></div></div></div>
+          <p class="sectionLead">Read items and quantities from a receipt or a shopping-app order screenshot, check them, and add them all at once. Or look up a product name by barcode, or type it in. Photos are read on your device and never sent to our servers.</p><div class="list"><div class="listItem"><span class="check">✓</span><div><b>Scan a receipt</b><small>Items and quantities, added in one go</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Order screenshot</b><small>Reuse the order screen from a shopping app</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Scan a barcode</b><small>Fill in the product name, or type it in</small></div></div></div>
         </div>
         <div class="media"><div class="phone flat"><img src="/shelftory/assets/screens/en/add.webp" alt="Add item screen" width="780" height="1688" loading="lazy" decoding="async"></div></div>
       </div>
     </section>
-    <section class="block" id="swipe">
-      <div class="wrap split rev">
+    <section class="block tint" id="swipe">
+      <div class="wrap split">
         <div>
           <p class="kicker">USE & DISCARD</p>
           <h2>Swipe right when it's used,<br>left when you need more.</h2>
@@ -229,8 +239,8 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
         <div class="media"><div class="textCard"><div class="list"><div class="listItem"><span class="check">✓</span><div><b>Used or eaten</b><small>Quantity goes down as you use it</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Discarded</b><small>Kept separately so you can see what goes to waste</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Add to cart</b><small>Running low? One swipe puts it on your list</small></div></div></div></div></div>
       </div>
     </section>
-    <section class="block tint" id="shopping">
-      <div class="wrap split">
+    <section class="block" id="shopping">
+      <div class="wrap split rev">
         <div>
           <p class="kicker">SHOPPING</p>
           <h2>Add, check off,<br>and stock up in one step.</h2>
@@ -239,21 +249,31 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
         <div class="media"><div class="phone flat"><img src="/shelftory/assets/screens/en/shop.webp" alt="Shopping list screen" width="780" height="1688" loading="lazy" decoding="async"></div></div>
       </div>
     </section>
-    <section class="block" id="menu">
-      <div class="wrap split rev">
+    <section class="block tint" id="menu">
+      <div class="wrap split">
         <div>
           <p class="kicker">WEEKLY MENU</p>
           <h2>Plan this week's meals<br>with what you have.</h2>
-          <p class="sectionLead">Plan meals by day and mealtime, and note the ingredients and amounts. Tap “Cooked” and the amounts used come off your items; ingredients you don&#x27;t have can go straight to your cart.</p>
+          <p class="sectionLead">Plan meals by day and mealtime, and note the ingredients and amounts. Tap “Cooked” and the amounts used come off your items; ingredients you don&#x27;t have can go straight to your cart. Add meal notes and day notes that repeat every year, and share a day&#x27;s meals with family.</p>
         </div>
         <div class="media"><div class="textCard"><div class="list"><div class="listItem"><span class="check">✓</span><div><b>By day and meal</b><small>Breakfast, lunch and dinner for the whole week</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Cooked</b><small>Used amounts come off your items automatically</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Missing ingredients</b><small>Add them to your shopping list</small></div></div></div></div></div>
+      </div>
+    </section>
+    <section class="block" id="widgets">
+      <div class="wrap split rev">
+        <div>
+          <p class="kicker">WIDGETS</p>
+          <h2>See it all without<br>opening the app.</h2>
+          <p class="sectionLead">Four free Android home screen widgets: items about to expire, today&#x27;s meals, a shopping list you can check off right on the widget, and shortcuts to scan, add a receipt, add an item or add to your list.</p>
+        </div>
+        <div class="media"><div class="textCard"><div class="list"><div class="listItem"><span class="check">✓</span><div><b>Quick actions</b><small>Scan · Receipt · Add · Add to list</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Expiring soon</b><small>The same items as your alerts, sized to fit</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Shopping · Today&#x27;s meals</b><small>Check off and glance without opening the app</small></div></div></div></div></div>
       </div>
     </section>
     <section class="block tint" id="stats">
       <div class="wrap split">
         <div>
-          <p class="kicker">STATS & EXPORT</p>
-          <h2>What you used and wasted,<br>at a glance.</h2>
+          <p class="kicker">FREE TO USE</p>
+          <h2>Stats, Excel and backups,<br>all free.</h2>
           <p class="sectionLead">See monthly trends of used and discarded items, and export your records to Excel. Item settings remember category, unit and expiry defaults so the next entry is faster.</p>
         </div>
         <div class="media"><div class="textCard"><div class="list"><div class="listItem"><span class="check">✓</span><div><b>Monthly stats</b><small>Used vs. discarded, month by month</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Excel export</b><small>Download your records as a spreadsheet</small></div></div><div class="listItem"><span class="check">✓</span><div><b>Item defaults</b><small>Category, unit and expiry remembered for next time</small></div></div></div></div></div>
@@ -276,7 +296,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
           <h2>Before you install,<br>take it for a spin.</h2>
           <p>Use the real app right in your browser, with sample items and a shopping list. Nothing you enter is saved.</p>
         </div>
-        <a class="pill" href="/shelftory/demo/">Try it on the web</a>
+        <a class="pill" href="/shelftory/demo/?lang=en">Try it on the web</a>
       </div>
     </section>
 
