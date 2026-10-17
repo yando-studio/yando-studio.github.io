@@ -274,7 +274,7 @@ def page(lang: str) -> str:
   <meta property="og:url" content="{url}" />
   <meta property="og:title" content="{e(c['title'])}" />
   <meta property="og:description" content="{e(c['desc'])}" />
-  <meta property="og:image" content="{SITE}/shelftory/assets/og-image.jpg" />
+  <meta property="og:image" content="{SITE}/shelftory/assets/og-image.jpg?v=20261017" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
