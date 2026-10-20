@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1B1140" />
-  <meta name="description" content="レシート入力からカード・分割払い、資産・負債、車の家計簿、月末レビュー、メモ・Dデーまで。会員登録なしで始められる家計簿アプリ。" />
+  <meta name="description" content="レシート入力からカード・分割払い、資産・負債、車の家計簿、旅行の家計簿、月末レビュー、メモ・Dデーまで。会員登録なしで始められる家計簿アプリ。" />
   <link rel="canonical" href="https://yandostudio.co.kr/cashtory/ja/" />
   <link rel="alternate" hreflang="ko" href="https://yandostudio.co.kr/cashtory/" />
   <link rel="alternate" hreflang="ja" href="https://yandostudio.co.kr/cashtory/ja/" />
@@ -18,7 +18,7 @@
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:url" content="https://yandostudio.co.kr/cashtory/ja/" />
   <meta property="og:title" content="CashTory — 記録は軽く、お金の流れはひと目で" />
-  <meta property="og:description" content="レシート入力からカード・分割払い、資産・負債、車の家計簿、月末レビュー、メモ・Dデーまで。会員登録なしで始められる家計簿アプリ。" />
+  <meta property="og:description" content="レシート入力からカード・分割払い、資産・負債、車の家計簿、旅行の家計簿、月末レビュー、メモ・Dデーまで。会員登録なしで始められる家計簿アプリ。" />
   <meta property="og:image" content="https://yandostudio.co.kr/cashtory/assets/og-image.jpg?v=20261017" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -152,7 +152,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
     <div class="wrap nav">
       <a class="brand" href="/cashtory/ja/"><img src="/cashtory/assets/app-icon.webp" alt="" width="36" height="36"><span>CashTory</span></a>
       <div class="navRight">
-        <nav class="navlinks" aria-label="CashTory"><a href="#features">機能</a><a href="#vehicle">車の家計簿</a><a href="#review">月末レビュー</a><a href="/cashtory/demo/?lang=ja">体験版</a></nav>
+        <nav class="navlinks" aria-label="CashTory"><a href="#features">機能</a><a href="#vehicle">車の家計簿</a><a href="#trip">旅行</a><a href="#review">月末レビュー</a><a href="/cashtory/demo/?lang=ja">体験版</a></nav>
         <nav class="lang" aria-label="Language"><a href="/cashtory/" hreflang="ko" lang="ko">KO</a><a href="/cashtory/ja/" hreflang="ja" lang="ja" aria-current="page">JA</a><a href="/cashtory/en/" hreflang="en" lang="en">EN</a></nav>
         <a class="pill small" href="https://play.google.com/store/apps/details?id=com.yandostudio.cashtory">Google Play</a>
       </div>
@@ -165,7 +165,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
         <div>
           <div class="eyebrow">CASH + STORY</div>
           <h1>記録は軽く、<br>お金の流れは<wbr>ひと目で。</h1>
-          <p class="lead">レシート入力からカード・分割払い、資産と車の家計簿、月末レビューまで。難しい金融用語ではなく、自分のお金の流れを気軽に記録できます。</p>
+          <p class="lead">レシート入力からカード・分割払い、資産と車の家計簿、旅行の費用、月末レビューまで。難しい金融用語ではなく、自分のお金の流れを気軽に記録できます。</p>
           <div class="cta">
             <a class="pill" href="https://play.google.com/store/apps/details?id=com.yandostudio.cashtory">Google Play で始める</a>
             <a class="pill ghost" href="/cashtory/demo/?lang=ja">インストールなしで試す</a>
@@ -243,6 +243,21 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
       </div>
     </section>
 
+    <section class="block" id="trip">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">TRIP LEDGER</p>
+          <h2>旅行のお金は、<br>旅行ノートに<wbr>別々に。</h2>
+          <p class="sectionLead">旅行ごとに別々に記録し、必要な支出だけを選んで家計簿に移せます。現地のお金のまま入力すれば為替レートで換算して合計を表示し、同行者と使ったお金は誰が誰にいくら送ればよいかまで教えてくれます。</p>
+        </div>
+        <div class="inputMedia">
+          <div class="phone"><img src="/cashtory/assets/screens/ja/trip.webp" alt="旅行の明細画面" width="780" height="1688" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="/cashtory/assets/screens/ja/trip2.webp" alt="旅行の精算画面" width="780" height="1688" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="features"><article class="feature"><div class="featureIcon" aria-hidden="true">$</div><h3>現地のお金のまま</h3><p>ドル・ウォンのまま入力すると、決めたレートで換算して合計・1人あたり・1日平均を表示します。</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">⇄</div><h3>自動で精算</h3><p>払った人と割る人を選ぶだけ。精算表は画像で共有でき、旅行ファイルをやり取りして同行者と合算できます。</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">☑</div><h3>日程 · 持ち物</h3><p>日ごとの予定と地図リンクを記録し、海外・国内の基本リストで持ち物をチェック。</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">✈</div><h3>旅行モード</h3><p>出発前日から家計簿上のスイッチひとつで旅行画面が先に。行った国は世界地図に塗られます。</p></article></div>
+      </div>
+    </section>
+
     <section class="reviewSec" id="review">
       <div class="wrap split">
         <div>
@@ -282,6 +297,17 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
           <p class="sectionLead">結婚記念日・誕生日・旅行など、お金がかかる日を D デーで管理し、その日のメモも残せます。毎年・毎月の繰り返しにも対応し、家計簿の日付の間にも表示されます。</p>
         </div>
         <div class="media"><div class="phone"><img src="/cashtory/assets/screens/ja/dday.webp" alt="メモ・記念日の画面" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+      </div>
+    </section>
+
+    <section class="block white" id="notify">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">NOTIFICATIONS</p>
+          <h2>大事な日は、<br>通知が先に<wbr>お知らせ。</h2>
+          <p class="sectionLead">Dデー・今後の支払い・残高不足の予測・分割払いの最終回・月末レビュー・車の整備。必要な通知だけを選び、好きな時間に受け取れます。通知はスマホの中だけで作られます。</p>
+        </div>
+        <div class="features"><article class="feature"><div class="featureIcon" aria-hidden="true">◷</div><h3>Dデー · 今後の支払い</h3><p>記念日の前日に。支払いは1日分をまとめて1回で。</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">!</div><h3>残高不足の予測</h3><p>口座から出るお金が残高より多いと3日前にお知らせ。</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">✓</div><h3>分割払いの最終回 · 月末レビュー</h3><p>最後の支払日と、新しい月の初日にレビューができたら。</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">⚙</div><h3>車の整備</h3><p>期間を決めた整備項目の交換時期に。</p></article></div>
       </div>
     </section>
 

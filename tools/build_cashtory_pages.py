@@ -26,12 +26,12 @@ OG_LOCALE = {"ko": "ko_KR", "ja": "ja_JP", "en": "en_US"}
 COPY = {
     "ko": {
         "title": "CashTory — 기록은 가볍게, 돈의 흐름은 한눈에",
-        "desc": "영수증 입력부터 카드·할부, 자산·부채, 차계부, 월말 리뷰와 메모·디데이까지. 회원가입 없이 시작하는 생활 가계부.",
-        "nav": [("#features", "기능"), ("#vehicle", "차계부"), ("#review", "월말 리뷰"), ("/cashtory/demo/", "체험하기"),
+        "desc": "영수증 입력부터 카드·할부, 자산·부채, 차계부, 여행 가계부, 월말 리뷰와 메모·디데이까지. 회원가입 없이 시작하는 생활 가계부.",
+        "nav": [("#features", "기능"), ("#vehicle", "차계부"), ("#trip", "여행"), ("#review", "월말 리뷰"), ("/cashtory/demo/", "체험하기"),
                 ("/cashtory/guide/", "사용법"), ("/cashtory/faq/", "FAQ")],
         "play": "Google Play",
         "hero_h1": "기록은 가볍게,<br>돈의 흐름은 한눈에.",
-        "hero_lead": "영수증 입력부터 카드·할부, 자산과 차계부, 월말 리뷰까지. 복잡한 금융 용어 대신 내가 쓰는 돈의 흐름을 편하게 기록해 보세요.",
+        "hero_lead": "영수증 입력부터 카드·할부, 자산과 차계부, 여행 경비, 월말 리뷰까지. 복잡한 금융 용어 대신 내가 쓰는 돈의 흐름을 편하게 기록해 보세요.",
         "hero_play": "Google Play에서 시작하기",
         "hero_demo": "설치 없이 체험하기",
         "hero_micro": "회원가입 없이 바로 시작 · 6개 언어 · 13개 통화",
@@ -76,6 +76,21 @@ COPY = {
                     ("⚡", "전기차도, 두 대도", "휘발유·경유·LPG·하이브리드·전기차 모두. 차는 무료로 2대까지 등록할 수 있어요."),
                     ("◔", "차량 통계", "이번 달 유지비, 최근 6개월 유지비와 연비 그래프, 정비 항목을 한 화면에.")],
         "alt_vehicle": "통계의 차량 탭 화면", "alt_vehicle2": "차량 유지비 추이와 상세 기록",
+        "trip_k": "TRIP LEDGER",
+        "trip_h": "여행 경비는<br>여행 공책에 따로.",
+        "trip_lead": "여행마다 따로 적고, 필요한 지출만 골라 내 가계부로 옮기세요. 현지 돈 그대로 적으면 환율로 바꿔 합계를 보여 주고, 일행과 쓴 돈은 누가 누구에게 얼마 보내면 되는지까지 알려줘요.",
+        "trip": [("¥", "현지 돈 그대로", "엔·달러 그대로 적으면 정한 환율로 바꿔 총 지출·1인당·하루 평균을 보여줘요."),
+                 ("⇄", "자동 정산", "낸 사람과 나눌 사람만 고르면 끝. 정산표는 이미지로 공유하고, 여행 파일을 주고받아 일행과 합칠 수 있어요."),
+                 ("☑", "일정 · 준비물", "날마다 일정과 지도 링크를 적고, 해외·국내 기본 목록으로 준비물을 챙겨요."),
+                 ("✈", "여행 모드", "출발 전날부터 가계부 위 스위치 하나로 여행 화면이 먼저. 다녀온 나라는 세계지도에 칠해져요.")],
+        "alt_trip": "여행 내역 화면", "alt_trip2": "여행 정산 화면",
+        "notify_k": "NOTIFICATIONS",
+        "notify_h": "챙길 날은<br>알림이 먼저 알려줘요.",
+        "notify_lead": "디데이·곧 나갈 돈·잔액 부족 예상·할부 마지막 회차·월말 리뷰·차량 정비. 필요한 알림만 골라, 원하는 시간에 받으세요. 알림은 휴대폰 안에서만 만들어져요.",
+        "notify": [("◷", "디데이 · 곧 나갈 돈", "기념일 하루 전, 나갈 돈은 하루치를 묶어서 한 번에."),
+                   ("!", "잔액 부족 예상", "통장에서 나갈 돈이 잔액보다 많으면 3일 전에 알려줘요."),
+                   ("✓", "할부 마지막 회차 · 월말 리뷰", "마지막 결제일, 새 달 첫날 리뷰가 준비되면."),
+                   ("⚙", "차량 정비", "기간을 정한 정비 항목의 교체 시기에.")],
         "review_k": "MONTHLY REVIEW",
         "review_h": "한 달의 숫자에<br>이야기를 더했어요.",
         "review_lead": "수입·지출과 저축률, 지난달과 달라진 점, 고정비·변동비, 카드·할부, 자산 변화와 다음 달 예정까지 한 화면에서 돌아보세요.",
@@ -121,11 +136,11 @@ COPY = {
     },
     "ja": {
         "title": "CashTory — 記録は軽く、お金の流れはひと目で",
-        "desc": "レシート入力からカード・分割払い、資産・負債、車の家計簿、月末レビュー、メモ・Dデーまで。会員登録なしで始められる家計簿アプリ。",
-        "nav": [("#features", "機能"), ("#vehicle", "車の家計簿"), ("#review", "月末レビュー"), ("/cashtory/demo/", "体験版")],
+        "desc": "レシート入力からカード・分割払い、資産・負債、車の家計簿、旅行の家計簿、月末レビュー、メモ・Dデーまで。会員登録なしで始められる家計簿アプリ。",
+        "nav": [("#features", "機能"), ("#vehicle", "車の家計簿"), ("#trip", "旅行"), ("#review", "月末レビュー"), ("/cashtory/demo/", "体験版")],
         "play": "Google Play",
         "hero_h1": "記録は軽く、<br>お金の流れは<wbr>ひと目で。",
-        "hero_lead": "レシート入力からカード・分割払い、資産と車の家計簿、月末レビューまで。難しい金融用語ではなく、自分のお金の流れを気軽に記録できます。",
+        "hero_lead": "レシート入力からカード・分割払い、資産と車の家計簿、旅行の費用、月末レビューまで。難しい金融用語ではなく、自分のお金の流れを気軽に記録できます。",
         "hero_play": "Google Play で始める",
         "hero_demo": "インストールなしで試す",
         "hero_micro": "会員登録なしですぐ開始 · 6言語 · 13通貨",
@@ -165,6 +180,21 @@ COPY = {
                     ("⚡", "EVも、2台目も", "ガソリン・軽油・LPG・ハイブリッド・EVに対応。車は無料で2台まで登録できます。"),
                     ("◔", "車両の統計", "今月の維持費、直近6か月の維持費と燃費のグラフ、整備項目を1画面で。")],
         "alt_vehicle": "統計の車両タブの画面", "alt_vehicle2": "車の維持費の推移と詳細記録",
+        "trip_k": "TRIP LEDGER",
+        "trip_h": "旅行のお金は、<br>旅行ノートに<wbr>別々に。",
+        "trip_lead": "旅行ごとに別々に記録し、必要な支出だけを選んで家計簿に移せます。現地のお金のまま入力すれば為替レートで換算して合計を表示し、同行者と使ったお金は誰が誰にいくら送ればよいかまで教えてくれます。",
+        "trip": [("$", "現地のお金のまま", "ドル・ウォンのまま入力すると、決めたレートで換算して合計・1人あたり・1日平均を表示します。"),
+                 ("⇄", "自動で精算", "払った人と割る人を選ぶだけ。精算表は画像で共有でき、旅行ファイルをやり取りして同行者と合算できます。"),
+                 ("☑", "日程 · 持ち物", "日ごとの予定と地図リンクを記録し、海外・国内の基本リストで持ち物をチェック。"),
+                 ("✈", "旅行モード", "出発前日から家計簿上のスイッチひとつで旅行画面が先に。行った国は世界地図に塗られます。")],
+        "alt_trip": "旅行の明細画面", "alt_trip2": "旅行の精算画面",
+        "notify_k": "NOTIFICATIONS",
+        "notify_h": "大事な日は、<br>通知が先に<wbr>お知らせ。",
+        "notify_lead": "Dデー・今後の支払い・残高不足の予測・分割払いの最終回・月末レビュー・車の整備。必要な通知だけを選び、好きな時間に受け取れます。通知はスマホの中だけで作られます。",
+        "notify": [("◷", "Dデー · 今後の支払い", "記念日の前日に。支払いは1日分をまとめて1回で。"),
+                   ("!", "残高不足の予測", "口座から出るお金が残高より多いと3日前にお知らせ。"),
+                   ("✓", "分割払いの最終回 · 月末レビュー", "最後の支払日と、新しい月の初日にレビューができたら。"),
+                   ("⚙", "車の整備", "期間を決めた整備項目の交換時期に。")],
         "review_k": "MONTHLY REVIEW",
         "review_h": "ひと月の数字に、<br>ストーリーを。",
         "review_lead": "収入・支出と貯蓄率、先月からの変化、固定費・変動費、カード・分割払い、資産の変化と来月の予定まで1画面で振り返れます。",
@@ -211,11 +241,11 @@ COPY = {
     },
     "en": {
         "title": "CashTory — Log lightly, see your money flow at a glance",
-        "desc": "From receipt scanning to cards and installments, assets, a vehicle log, a monthly review and memos & D-days. A budget app you can start without signing up.",
-        "nav": [("#features", "Features"), ("#vehicle", "Vehicle log"), ("#review", "Monthly review"), ("/cashtory/demo/", "Try it")],
+        "desc": "From receipt scanning to cards and installments, assets, a vehicle log, a trip ledger, a monthly review and memos & D-days. A budget app you can start without signing up.",
+        "nav": [("#features", "Features"), ("#vehicle", "Vehicle log"), ("#trip", "Trips"), ("#review", "Monthly review"), ("/cashtory/demo/", "Try it")],
         "play": "Google Play",
         "hero_h1": "Log lightly.<br>See your money at a glance.",
-        "hero_lead": "From receipts to cards and installments, assets, your car and a monthly review. No finance jargon — just an easy way to keep track of where your money goes.",
+        "hero_lead": "From receipts to cards and installments, assets, your car, your trips and a monthly review. No finance jargon — just an easy way to keep track of where your money goes.",
         "hero_play": "Get it on Google Play",
         "hero_demo": "Try it without installing",
         "hero_micro": "No sign-up · 6 languages · 13 currencies",
@@ -255,6 +285,21 @@ COPY = {
                     ("⚡", "EVs and a second car", "Gas, diesel, LPG, hybrid or electric; miles and gallons or km and liters. Add up to 2 cars for free."),
                     ("◔", "Vehicle stats", "This month's running costs, 6-month cost and fuel economy charts, and maintenance items on one screen.")],
         "alt_vehicle": "Vehicle tab in Stats", "alt_vehicle2": "Vehicle running costs and details",
+        "trip_k": "TRIP LEDGER",
+        "trip_h": "Trip spending<br>in its own notebook.",
+        "trip_lead": "Keep each trip separate and move only the expenses you choose into your ledger. Enter amounts in the local currency and see totals at your exchange rate; for group trips, it tells you who should pay whom, and how much.",
+        "trip": [("€", "Local currency as is", "Enter euros or yen as they are; totals, per person and per day are converted at your rate."),
+                 ("⇄", "Settle up automatically", "Pick who paid and who's splitting. Share the settlement as an image, and swap trip files to combine everyone's entries."),
+                 ("☑", "Plans & packing list", "Add each day's plans with map links, and pack with the built-in abroad or domestic lists."),
+                 ("✈", "Trip mode", "From the day before you leave, one switch above your ledger opens the trip first. Countries you've visited fill in on a world map.")],
+        "alt_trip": "Trip expenses screen", "alt_trip2": "Trip settlement screen",
+        "notify_k": "NOTIFICATIONS",
+        "notify_h": "Reminders for<br>the days that matter.",
+        "notify_lead": "D-days, money coming up, low balance warnings, last installments, the monthly review and car service. Choose the ones you want and when they arrive. Notifications are created on your phone only.",
+        "notify": [("◷", "D-days & coming up", "The day before an anniversary; a day's payments bundled into one."),
+                   ("!", "Low balance ahead", "3 days early when an account's upcoming payments exceed its balance."),
+                   ("✓", "Last installment & monthly review", "On the final payment date, and when your new month's review is ready."),
+                   ("⚙", "Car service", "When a service item with a time interval is due.")],
         "review_k": "MONTHLY REVIEW",
         "review_h": "A story behind<br>each month's numbers.",
         "review_lead": "Income, spending and savings rate, what changed since last month, fixed and variable costs, cards and installments, how your assets moved and what's coming next month — all on one screen.",
@@ -510,6 +555,14 @@ def page(lang: str) -> str:
         f'<article class="feature"><div class="featureIcon" aria-hidden="true">{i}</div><h3>{e(t)}</h3><p>{e(p)}</p></article>'
         for i, t, p in c["vehicle"]
     )
+    trip = "".join(
+        f'<article class="feature"><div class="featureIcon" aria-hidden="true">{i}</div><h3>{e(t)}</h3><p>{e(p)}</p></article>'
+        for i, t, p in c["trip"]
+    )
+    notify = "".join(
+        f'<article class="feature"><div class="featureIcon" aria-hidden="true">{i}</div><h3>{e(t)}</h3><p>{e(p)}</p></article>'
+        for i, t, p in c["notify"]
+    )
     review_list = "".join(
         f'<div class="listItem"><span class="check">✓</span><span>{e(t)}</span></div>' for t in c["review_list"]
     )
@@ -653,6 +706,21 @@ def page(lang: str) -> str:
       </div>
     </section>
 
+    <section class="block" id="trip">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">{c['trip_k']}</p>
+          <h2>{c['trip_h']}</h2>
+          <p class="sectionLead">{e(c['trip_lead'])}</p>
+        </div>
+        <div class="inputMedia">
+          <div class="phone">{img('trip', c['alt_trip'])}</div>
+          <div class="phone">{img('trip2', c['alt_trip2'])}</div>
+        </div>
+        <div class="features">{trip}</div>
+      </div>
+    </section>
+
     <section class="reviewSec" id="review">
       <div class="wrap split">
         <div>
@@ -692,6 +760,17 @@ def page(lang: str) -> str:
           <p class="sectionLead">{e(c['dday_lead'])}</p>
         </div>
         <div class="media"><div class="phone">{img('dday', c['alt_dday'])}</div></div>
+      </div>
+    </section>
+
+    <section class="block white" id="notify">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">{c['notify_k']}</p>
+          <h2>{c['notify_h']}</h2>
+          <p class="sectionLead">{e(c['notify_lead'])}</p>
+        </div>
+        <div class="features">{notify}</div>
       </div>
     </section>
 
