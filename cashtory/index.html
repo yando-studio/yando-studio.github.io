@@ -85,6 +85,9 @@ section.block{padding:96px 0}
 .feature h3{margin:18px 0 6px;font-size:19px;letter-spacing:-.03em}.feature p{margin:0;color:var(--sub);font-size:14px}
 .inputMedia{display:flex;justify-content:center;gap:24px;margin-top:48px}
 .inputMedia .phone{width:min(280px,44vw)}
+.inputMedia.four{display:grid;grid-template-columns:repeat(4,minmax(0,250px));justify-content:center;gap:22px}
+.inputMedia.four .phone{width:auto;border-radius:38px;padding:8px}.inputMedia.four .phone img{border-radius:31px}
+.inputMedia.four figure{margin:0}.inputMedia.four figcaption{margin-top:14px;text-align:center;font-size:14px;font-weight:800;color:var(--sub)}
 .receipt{margin-top:56px;display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:var(--shadow)}
 .scrollShot{background:#15151a;border-radius:30px;padding:8px;width:min(320px,100%);height:560px;margin:0 auto;overflow:hidden}
 .scrollShot img{width:100%;border-radius:23px;animation:shotScroll 12s cubic-bezier(.65,0,.35,1) infinite alternate}
@@ -127,6 +130,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
   .split.rev>.media{order:0}
   .features{grid-template-columns:1fr 1fr}
   .grid4{grid-template-columns:1fr 1fr}
+  .inputMedia.four{grid-template-columns:repeat(2,minmax(0,280px))}
   .stage{min-height:0;padding:12px 0}
 }
 @media(max-width:600px){
@@ -141,6 +145,9 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
   .inputMedia{gap:12px}
   .inputMedia .phone{width:46vw;border-radius:28px;padding:6px}
   .inputMedia .phone img{border-radius:23px}
+  .inputMedia.four{gap:16px 12px}
+  .inputMedia.four .phone{width:auto}
+  .inputMedia.four figcaption{margin-top:10px;font-size:13px}
   section.block,.reviewSec{padding:72px 0}
   .tryBand{padding:30px 24px}
 }
@@ -259,10 +266,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
           <h2>여행 경비는<br>여행 공책에 따로.</h2>
           <p class="sectionLead">여행마다 따로 적고, 필요한 지출만 골라 내 가계부로 옮기세요. 현지 돈 그대로 적으면 환율로 바꿔 합계를 보여 주고, 일행과 쓴 돈은 누가 누구에게 얼마 보내면 되는지까지 알려줘요.</p>
         </div>
-        <div class="inputMedia">
-          <div class="phone"><img src="/cashtory/assets/screens/ko/trip.webp" alt="여행 내역 화면" width="780" height="1688" loading="lazy" decoding="async"></div>
-          <div class="phone"><img src="/cashtory/assets/screens/ko/trip2.webp" alt="여행 정산 화면" width="780" height="1688" loading="lazy" decoding="async"></div>
-        </div>
+        <div class="inputMedia four"><figure><div class="phone"><img src="/cashtory/assets/screens/ko/trip.webp" alt="여행 지출 내역 화면" width="780" height="1688" loading="lazy" decoding="async"></div><figcaption>내역</figcaption></figure><figure><div class="phone"><img src="/cashtory/assets/screens/ko/trip-plans.webp" alt="여행 일정 화면" width="780" height="1688" loading="lazy" decoding="async"></div><figcaption>일정</figcaption></figure><figure><div class="phone"><img src="/cashtory/assets/screens/ko/trip-stats.webp" alt="여행 통계 화면" width="780" height="1688" loading="lazy" decoding="async"></div><figcaption>통계</figcaption></figure><figure><div class="phone"><img src="/cashtory/assets/screens/ko/trip2.webp" alt="여행 정산 화면" width="780" height="1688" loading="lazy" decoding="async"></div><figcaption>정산</figcaption></figure></div>
         <div class="features"><article class="feature"><div class="featureIcon" aria-hidden="true">¥</div><h3>현지 돈 그대로</h3><p>엔·달러 그대로 적으면 정한 환율로 바꿔 총 지출·1인당·하루 평균을 보여줘요.</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">⇄</div><h3>자동 정산</h3><p>낸 사람과 나눌 사람만 고르면 끝. 정산표는 이미지로 공유하고, 여행 파일을 주고받아 일행과 합칠 수 있어요.</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">☑</div><h3>일정 · 준비물</h3><p>날마다 일정과 지도 링크를 적고, 해외·국내 기본 목록으로 준비물을 챙겨요.</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">✈</div><h3>여행 모드</h3><p>출발 전날부터 가계부 위 스위치 하나로 여행 화면이 먼저. 다녀온 나라는 세계지도에 칠해져요.</p></article></div>
       </div>
     </section>

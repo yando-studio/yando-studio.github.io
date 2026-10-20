@@ -83,7 +83,8 @@ COPY = {
                  ("⇄", "자동 정산", "낸 사람과 나눌 사람만 고르면 끝. 정산표는 이미지로 공유하고, 여행 파일을 주고받아 일행과 합칠 수 있어요."),
                  ("☑", "일정 · 준비물", "날마다 일정과 지도 링크를 적고, 해외·국내 기본 목록으로 준비물을 챙겨요."),
                  ("✈", "여행 모드", "출발 전날부터 가계부 위 스위치 하나로 여행 화면이 먼저. 다녀온 나라는 세계지도에 칠해져요.")],
-        "alt_trip": "여행 내역 화면", "alt_trip2": "여행 정산 화면",
+        "trip_shots": [("trip", "내역", "여행 지출 내역 화면"), ("trip-plans", "일정", "여행 일정 화면"),
+                       ("trip-stats", "통계", "여행 통계 화면"), ("trip2", "정산", "여행 정산 화면")],
         "notify_k": "NOTIFICATIONS",
         "notify_h": "챙길 날은<br>알림이 먼저 알려줘요.",
         "notify_lead": "디데이·곧 나갈 돈·잔액 부족 예상·할부 마지막 회차·월말 리뷰·차량 정비. 필요한 알림만 골라, 원하는 시간에 받으세요. 알림은 휴대폰 안에서만 만들어져요.",
@@ -187,7 +188,8 @@ COPY = {
                  ("⇄", "自動で精算", "払った人と割る人を選ぶだけ。精算表は画像で共有でき、旅行ファイルをやり取りして同行者と合算できます。"),
                  ("☑", "日程 · 持ち物", "日ごとの予定と地図リンクを記録し、海外・国内の基本リストで持ち物をチェック。"),
                  ("✈", "旅行モード", "出発前日から家計簿上のスイッチひとつで旅行画面が先に。行った国は世界地図に塗られます。")],
-        "alt_trip": "旅行の明細画面", "alt_trip2": "旅行の精算画面",
+        "trip_shots": [("trip", "支出", "旅行の支出画面"), ("trip-plans", "日程", "旅行の日程画面"),
+                       ("trip-stats", "統計", "旅行の統計画面"), ("trip2", "精算", "旅行の精算画面")],
         "notify_k": "NOTIFICATIONS",
         "notify_h": "大事な日は、<br>通知が先に<wbr>お知らせ。",
         "notify_lead": "Dデー・今後の支払い・残高不足の予測・分割払いの最終回・月末レビュー・車の整備。必要な通知だけを選び、好きな時間に受け取れます。通知はスマホの中だけで作られます。",
@@ -292,7 +294,8 @@ COPY = {
                  ("⇄", "Settle up automatically", "Pick who paid and who's splitting. Share the settlement as an image, and swap trip files to combine everyone's entries."),
                  ("☑", "Plans & packing list", "Add each day's plans with map links, and pack with the built-in abroad or domestic lists."),
                  ("✈", "Trip mode", "From the day before you leave, one switch above your ledger opens the trip first. Countries you've visited fill in on a world map.")],
-        "alt_trip": "Trip expenses screen", "alt_trip2": "Trip settlement screen",
+        "trip_shots": [("trip", "Expenses", "Trip expenses screen"), ("trip-plans", "Schedule", "Trip schedule screen"),
+                       ("trip-stats", "Stats", "Trip stats screen"), ("trip2", "Settle up", "Trip settle-up screen")],
         "notify_k": "NOTIFICATIONS",
         "notify_h": "Reminders for<br>the days that matter.",
         "notify_lead": "D-days, money coming up, low balance warnings, last installments, the monthly review and car service. Choose the ones you want and when they arrive. Notifications are created on your phone only.",
@@ -410,6 +413,9 @@ section.block{padding:96px 0}
 .feature h3{margin:18px 0 6px;font-size:19px;letter-spacing:-.03em}.feature p{margin:0;color:var(--sub);font-size:14px}
 .inputMedia{display:flex;justify-content:center;gap:24px;margin-top:48px}
 .inputMedia .phone{width:min(280px,44vw)}
+.inputMedia.four{display:grid;grid-template-columns:repeat(4,minmax(0,250px));justify-content:center;gap:22px}
+.inputMedia.four .phone{width:auto;border-radius:38px;padding:8px}.inputMedia.four .phone img{border-radius:31px}
+.inputMedia.four figure{margin:0}.inputMedia.four figcaption{margin-top:14px;text-align:center;font-size:14px;font-weight:800;color:var(--sub)}
 .receipt{margin-top:56px;display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:var(--shadow)}
 .scrollShot{background:#15151a;border-radius:30px;padding:8px;width:min(320px,100%);height:560px;margin:0 auto;overflow:hidden}
 .scrollShot img{width:100%;border-radius:23px;animation:shotScroll 12s cubic-bezier(.65,0,.35,1) infinite alternate}
@@ -452,6 +458,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
   .split.rev>.media{order:0}
   .features{grid-template-columns:1fr 1fr}
   .grid4{grid-template-columns:1fr 1fr}
+  .inputMedia.four{grid-template-columns:repeat(2,minmax(0,280px))}
   .stage{min-height:0;padding:12px 0}
 }
 @media(max-width:600px){
@@ -466,6 +473,9 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
   .inputMedia{gap:12px}
   .inputMedia .phone{width:46vw;border-radius:28px;padding:6px}
   .inputMedia .phone img{border-radius:23px}
+  .inputMedia.four{gap:16px 12px}
+  .inputMedia.four .phone{width:auto}
+  .inputMedia.four figcaption{margin-top:10px;font-size:13px}
   section.block,.reviewSec{padding:72px 0}
   .tryBand{padding:30px 24px}
 }
@@ -558,6 +568,10 @@ def page(lang: str) -> str:
     trip = "".join(
         f'<article class="feature"><div class="featureIcon" aria-hidden="true">{i}</div><h3>{e(t)}</h3><p>{e(p)}</p></article>'
         for i, t, p in c["trip"]
+    )
+    trip_shots = "".join(
+        f'<figure><div class="phone">{img(n, a)}</div><figcaption>{e(cap)}</figcaption></figure>'
+        for n, cap, a in c["trip_shots"]
     )
     notify = "".join(
         f'<article class="feature"><div class="featureIcon" aria-hidden="true">{i}</div><h3>{e(t)}</h3><p>{e(p)}</p></article>'
@@ -713,10 +727,7 @@ def page(lang: str) -> str:
           <h2>{c['trip_h']}</h2>
           <p class="sectionLead">{e(c['trip_lead'])}</p>
         </div>
-        <div class="inputMedia">
-          <div class="phone">{img('trip', c['alt_trip'])}</div>
-          <div class="phone">{img('trip2', c['alt_trip2'])}</div>
-        </div>
+        <div class="inputMedia four">{trip_shots}</div>
         <div class="features">{trip}</div>
       </div>
     </section>

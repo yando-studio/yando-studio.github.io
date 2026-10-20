@@ -85,6 +85,9 @@ section.block{padding:96px 0}
 .feature h3{margin:18px 0 6px;font-size:19px;letter-spacing:-.03em}.feature p{margin:0;color:var(--sub);font-size:14px}
 .inputMedia{display:flex;justify-content:center;gap:24px;margin-top:48px}
 .inputMedia .phone{width:min(280px,44vw)}
+.inputMedia.four{display:grid;grid-template-columns:repeat(4,minmax(0,250px));justify-content:center;gap:22px}
+.inputMedia.four .phone{width:auto;border-radius:38px;padding:8px}.inputMedia.four .phone img{border-radius:31px}
+.inputMedia.four figure{margin:0}.inputMedia.four figcaption{margin-top:14px;text-align:center;font-size:14px;font-weight:800;color:var(--sub)}
 .receipt{margin-top:56px;display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:var(--shadow)}
 .scrollShot{background:#15151a;border-radius:30px;padding:8px;width:min(320px,100%);height:560px;margin:0 auto;overflow:hidden}
 .scrollShot img{width:100%;border-radius:23px;animation:shotScroll 12s cubic-bezier(.65,0,.35,1) infinite alternate}
@@ -127,6 +130,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
   .split.rev>.media{order:0}
   .features{grid-template-columns:1fr 1fr}
   .grid4{grid-template-columns:1fr 1fr}
+  .inputMedia.four{grid-template-columns:repeat(2,minmax(0,280px))}
   .stage{min-height:0;padding:12px 0}
 }
 @media(max-width:600px){
@@ -141,6 +145,9 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
   .inputMedia{gap:12px}
   .inputMedia .phone{width:46vw;border-radius:28px;padding:6px}
   .inputMedia .phone img{border-radius:23px}
+  .inputMedia.four{gap:16px 12px}
+  .inputMedia.four .phone{width:auto}
+  .inputMedia.four figcaption{margin-top:10px;font-size:13px}
   section.block,.reviewSec{padding:72px 0}
   .tryBand{padding:30px 24px}
 }
@@ -250,10 +257,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:#777A85;font-s
           <h2>旅行のお金は、<br>旅行ノートに<wbr>別々に。</h2>
           <p class="sectionLead">旅行ごとに別々に記録し、必要な支出だけを選んで家計簿に移せます。現地のお金のまま入力すれば為替レートで換算して合計を表示し、同行者と使ったお金は誰が誰にいくら送ればよいかまで教えてくれます。</p>
         </div>
-        <div class="inputMedia">
-          <div class="phone"><img src="/cashtory/assets/screens/ja/trip.webp" alt="旅行の明細画面" width="780" height="1688" loading="lazy" decoding="async"></div>
-          <div class="phone"><img src="/cashtory/assets/screens/ja/trip2.webp" alt="旅行の精算画面" width="780" height="1688" loading="lazy" decoding="async"></div>
-        </div>
+        <div class="inputMedia four"><figure><div class="phone"><img src="/cashtory/assets/screens/ja/trip.webp" alt="旅行の支出画面" width="780" height="1688" loading="lazy" decoding="async"></div><figcaption>支出</figcaption></figure><figure><div class="phone"><img src="/cashtory/assets/screens/ja/trip-plans.webp" alt="旅行の日程画面" width="780" height="1688" loading="lazy" decoding="async"></div><figcaption>日程</figcaption></figure><figure><div class="phone"><img src="/cashtory/assets/screens/ja/trip-stats.webp" alt="旅行の統計画面" width="780" height="1688" loading="lazy" decoding="async"></div><figcaption>統計</figcaption></figure><figure><div class="phone"><img src="/cashtory/assets/screens/ja/trip2.webp" alt="旅行の精算画面" width="780" height="1688" loading="lazy" decoding="async"></div><figcaption>精算</figcaption></figure></div>
         <div class="features"><article class="feature"><div class="featureIcon" aria-hidden="true">$</div><h3>現地のお金のまま</h3><p>ドル・ウォンのまま入力すると、決めたレートで換算して合計・1人あたり・1日平均を表示します。</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">⇄</div><h3>自動で精算</h3><p>払った人と割る人を選ぶだけ。精算表は画像で共有でき、旅行ファイルをやり取りして同行者と合算できます。</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">☑</div><h3>日程 · 持ち物</h3><p>日ごとの予定と地図リンクを記録し、海外・国内の基本リストで持ち物をチェック。</p></article><article class="feature"><div class="featureIcon" aria-hidden="true">✈</div><h3>旅行モード</h3><p>出発前日から家計簿上のスイッチひとつで旅行画面が先に。行った国は世界地図に塗られます。</p></article></div>
       </div>
     </section>
