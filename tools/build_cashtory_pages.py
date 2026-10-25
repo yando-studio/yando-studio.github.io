@@ -585,7 +585,7 @@ def page(lang: str) -> str:
     if c["widgets_img"]:
         src, alt = c["widgets_img"]
         w, h = webp_size(ROOT / src.lstrip("/"))
-        widgets = f'<div class="widgetImg"><img src="{src}" alt="{e(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"></div>'
+        widgets = f'<div class="widgetImg"><img src="{src}?v={SHOTS_VER}" alt="{e(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"></div>'
     else:
         widgets = '<div class="grid3">' + "".join(
             f'<div class="card"><b>{e(b)}</b><p>{e(p)}</p></div>' for b, p in c["widgets_cards"]
