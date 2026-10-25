@@ -22,6 +22,8 @@ MAIL = "mailto:official.yo.studio@gmail.com"
 LANGS = ["ko", "ja", "en"]
 PATHS = {"ko": "/cashtory/", "ja": "/cashtory/ja/", "en": "/cashtory/en/"}
 OG_LOCALE = {"ko": "ko_KR", "ja": "ja_JP", "en": "en_US"}
+# Bump when the app screenshots are re-captured, so browsers fetch the new images
+SHOTS_VER = "20261025"
 
 COPY = {
     "ko": {
@@ -44,7 +46,7 @@ COPY = {
                   ("백업 & 엑셀", "기록을 앱 안에만 가두지 않아요.")],
         "input_k": "FAST INPUT",
         "input_h": "가운데 버튼 하나로,<br>네 가지 입력.",
-        "input_lead": "가운데 + 버튼을 톡 누르면 직접 입력, 누른 채 밀면 영수증 · 즐겨찾기 · 메모·디데이. 금액을 넣으면 다음 칸이 자동으로 열려요.",
+        "input_lead": "가운데 입력 버튼을 톡 누르면 직접 입력, 누른 채 밀면 영수증 · 즐겨찾기 · 메모·디데이. 금액을 넣으면 다음 칸이 자동으로 열려요.",
         "inputs": [("✎", "직접 입력", "계산기로 금액을 넣고 자산과 분류를 고르면 끝. 지출·수입·이체를 한 화면에서."),
                    ("▣", "영수증 입력", "날짜·가게·금액·품목 인식을 도와줘요. 총액 1건 또는 품목별로 나눠 저장."),
                    ("★", "즐겨찾기", "커피·점심·교통비처럼 자주 쓰는 내용을 오늘 날짜로 바로 불러와요."),
@@ -81,7 +83,7 @@ COPY = {
         "trip_lead": "여행마다 따로 적고, 필요한 지출만 골라 내 가계부로 옮기세요. 현지 돈 그대로 적으면 환율로 바꿔 합계를 보여 주고, 일행과 쓴 돈은 누가 누구에게 얼마 보내면 되는지까지 알려줘요.",
         "trip": [("¥", "현지 돈 그대로", "엔·달러 그대로 적으면 정한 환율로 바꿔 총 지출·1인당·하루 평균을 보여줘요."),
                  ("⇄", "자동 정산", "낸 사람과 나눌 사람만 고르면 끝. 정산표는 이미지로 공유하고, 여행 파일을 주고받아 일행과 합칠 수 있어요."),
-                 ("☑", "일정 · 준비물", "일정에 지도 링크를 붙이면 지도와 길찾기를 바로 열어요. 준비물은 해외·국내 기본 목록으로 챙겨요."),
+                 ("☑", "일정 · 준비물", "지도 링크와 메모를 붙인 일정은 시간 순으로 바로 정리되고, 지도·길찾기도 한 번에 열려요. 준비물은 해외·국내 기본 목록으로 챙겨요."),
                  ("✈", "여행 모드", "출발 전날부터 가계부 위 스위치 하나로 여행 화면이 먼저. 다녀온 나라는 세계지도에 칠해져요.")],
         "trip_shots": [("trip", "내역", "여행 지출 내역 화면"), ("trip-plans", "일정", "여행 일정 화면"),
                        ("trip-stats", "통계", "여행 통계 화면"), ("trip2", "정산", "여행 정산 화면")],
@@ -154,7 +156,7 @@ COPY = {
                   ("バックアップ & Excel", "記録をアプリの中に閉じ込めません。")],
         "input_k": "FAST INPUT",
         "input_h": "中央のボタン<wbr>ひとつで、<br>4つの<wbr>入力方法。",
-        "input_lead": "中央の + ボタンを軽く押すと手入力、押したままスライドするとレシート・よく使う項目・メモ・Dデー。金額を入れると次の項目が自動で開きます。",
+        "input_lead": "中央の「入力」ボタンを軽く押すと手入力、押したままスライドするとレシート・よく使う項目・メモ・Dデー。金額を入れると次の項目が自動で開きます。",
         "inputs": [("✎", "手入力", "電卓で金額を入れて、資産と分類を選ぶだけ。支出・収入・振替を1画面で。"),
                    ("▣", "レシート", "日付・店名・金額・品目の読み取りを手伝います。合計1件でも、品目ごとにも保存できます。"),
                    ("★", "よく使う項目", "コーヒー・ランチ・交通費など、よく使う内容を今日の日付ですぐ呼び出せます。"),
@@ -186,7 +188,7 @@ COPY = {
         "trip_lead": "旅行ごとに別々に記録し、必要な支出だけを選んで家計簿に移せます。現地のお金のまま入力すれば為替レートで換算して合計を表示し、同行者と使ったお金は誰が誰にいくら送ればよいかまで教えてくれます。",
         "trip": [("$", "現地のお金のまま", "ドル・ウォンのまま入力すると、決めたレートで換算して合計・1人あたり・1日平均を表示します。"),
                  ("⇄", "自動で精算", "払った人と割る人を選ぶだけ。精算表は画像で共有でき、旅行ファイルをやり取りして同行者と合算できます。"),
-                 ("☑", "日程 · 持ち物", "予定に地図リンクを付ければ、地図と経路をすぐに開けます。持ち物は海外・国内の基本リストでチェック。"),
+                 ("☑", "日程 · 持ち物", "地図リンクやメモを付けた予定はすぐ時間順に並び、地図と経路もワンタップで。持ち物は海外・国内の基本リストでチェック。"),
                  ("✈", "旅行モード", "出発前日から家計簿上のスイッチひとつで旅行画面が先に。行った国は世界地図に塗られます。")],
         "trip_shots": [("trip", "支出", "旅行の支出画面"), ("trip-plans", "日程", "旅行の日程画面"),
                        ("trip-stats", "統計", "旅行の統計画面"), ("trip2", "精算", "旅行の精算画面")],
@@ -260,7 +262,7 @@ COPY = {
                   ("Backup & Excel", "Your records aren't locked inside the app.")],
         "input_k": "FAST INPUT",
         "input_h": "One center button,<br>four ways to add.",
-        "input_lead": "Tap the center + to type it in, or hold and slide for receipts, favorites, or a memo & D-day. After the amount, the next field opens on its own.",
+        "input_lead": "Tap the center Add button to type it in, or hold and slide for receipts, favorites, or a memo & D-day. After the amount, the next field opens on its own.",
         "inputs": [("✎", "Type it in", "Enter the amount on the calculator, pick an account and category, done. Expense, income and transfer on one screen."),
                    ("▣", "Receipt", "Helps read the date, store, total and items. Save it as one record or split it by item."),
                    ("★", "Favorites", "Save things you buy often — coffee, lunch, transit — and add them for today in a tap."),
@@ -292,7 +294,7 @@ COPY = {
         "trip_lead": "Keep each trip separate and move only the expenses you choose into your ledger. Enter amounts in the local currency and see totals at your exchange rate; for group trips, it tells you who should pay whom, and how much.",
         "trip": [("€", "Local currency as is", "Enter euros or yen as they are; totals, per person and per day are converted at your rate."),
                  ("⇄", "Settle up automatically", "Pick who paid and who's splitting. Share the settlement as an image, and swap trip files to combine everyone's entries."),
-                 ("☑", "Plans & packing list", "Add a map link to a plan to open the map or directions in one tap, and pack with the built-in abroad or domestic lists."),
+                 ("☑", "Plans & packing list", "Plans sort by time as you go, with notes and map links that open the map or directions in one tap. Pack with the built-in abroad or domestic lists."),
                  ("✈", "Trip mode", "From the day before you leave, one switch above your ledger opens the trip first. Countries you've visited fill in on a world map.")],
         "trip_shots": [("trip", "Expenses", "Trip expenses screen"), ("trip-plans", "Schedule", "Trip schedule screen"),
                        ("trip-stats", "Stats", "Trip stats screen"), ("trip2", "Settle up", "Trip settle-up screen")],
@@ -529,7 +531,7 @@ def page(lang: str) -> str:
     def img(name, alt, eager=False):
         w, h = webp_size(ROOT / shot(name).lstrip("/"))
         loading = "" if eager else ' loading="lazy" decoding="async"'
-        return f'<img src="{shot(name)}" alt="{e(alt)}" width="{w}" height="{h}"{loading}>'
+        return f'<img src="{shot(name)}?v={SHOTS_VER}" alt="{e(alt)}" width="{w}" height="{h}"{loading}>'
 
     alternates = "\n".join(
         f'  <link rel="alternate" hreflang="{l}" href="{SITE}{PATHS[l]}" />' for l in LANGS
